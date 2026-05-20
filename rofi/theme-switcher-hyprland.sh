@@ -20,7 +20,7 @@ for cmd in wallust jq; do
 done
 
 # ── Directories ──────────────────────────────────────────────────────
-WALLPAPER_DIR="$HOME/Pictures/wallpapers"
+WALLPAPER_DIR="$HOME/HyprDots/wallpapers"
 CACHE_DIR="$HOME/.cache/theme-switcher"
 THUMB_DIR="$CACHE_DIR/thumbs"
 STYLE="$HOME/.config/rofi/theme-switcher.rasi"
@@ -2116,7 +2116,7 @@ current_wallpaper() {
   local wp
   wp=$(awww query 2>/dev/null | awk -F'image: ' '/image: /{print $2; exit}')
   if [[ -z "$wp" || ! -f "$wp" ]]; then
-    wp=$(find "$HOME/Pictures/wallpapers" -maxdepth 1 -type f \
+    wp=$(find -"$HOME/HyprDots/wallpapers" -maxdepth 1 -type f \
       \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
          -o -iname '*.webp' \) | sort | head -1)
   fi

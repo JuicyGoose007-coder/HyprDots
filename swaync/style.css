@@ -5,21 +5,21 @@
 }
 
 :root {
-    --bg:           #000205;
-    --bg-rgb:       0, 2, 5;
-    --surface:      #081F1E;
-    --surface-rgb:  8, 31, 30;
-    --border:       #728985;
-    --border-rgb:   114, 137, 133;
-    --text:         #a4c4be;
-    --text-rgb:     164, 196, 190;
-    --text2:        #A4C4BE;
-    --accent:       #05dcb1;
-    --accent-rgb:   5, 220, 177;
-    --accent2:      #dcd307;
-    --critical:     #dc6205;
-    --critical-rgb: 220, 98, 5;
-    --low:          #000205;
+    --bg:           #2B1512;
+    --bg-rgb:       43, 21, 18;
+    --surface:      #3E2212;
+    --surface-rgb:  62, 34, 18;
+    --border:       #7B6C67;
+    --border-rgb:   123, 108, 103;
+    --text:         #b49d96;
+    --text-rgb:     180, 157, 150;
+    --text2:        #B09A93;
+    --accent:       #dc3e07;
+    --accent-rgb:   220, 62, 7;
+    --accent2:      #dcc708;
+    --critical:     #dc5104;
+    --critical-rgb: 220, 81, 4;
+    --low:          #2B1512;
     --radius:       14px;
 }
 
@@ -32,10 +32,10 @@
 
 .floating-notifications .notification-row .notification-background .notification {
     border-radius: var(--radius);
-    border: 1px solid rgba(114, 137, 133, 0.6);
+    border: 1px solid rgba(123, 108, 103, 0.6);
     border-left: 3px solid var(--accent);
-    background: rgba(8, 31, 30, 0.95);
-    box-shadow: 0 4px 16px rgba(0, 2, 5, 0.6);
+    background: rgba(62, 34, 18, 0.95);
+    box-shadow: 0 4px 16px rgba(43, 21, 18, 0.6);
     padding: 0;
     animation: notification-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -51,12 +51,12 @@
 }
 
 .control-center {
-    background: rgba(0, 2, 5, 0.88);
+    background: rgba(43, 21, 18, 0.88);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     border-radius: 16px;
-    border: 1px solid rgba(114, 137, 133, 0.5);
-    box-shadow: 0 8px 32px rgba(0, 2, 5, 0.5);
+    border: 1px solid rgba(123, 108, 103, 0.5);
+    box-shadow: 0 8px 32px rgba(43, 21, 18, 0.5);
 }
 
 .control-center .control-center-list-placeholder {
@@ -67,7 +67,7 @@
 .control-center .control-center-list .notification {
     border-left: 3px solid var(--accent);
     border-radius: var(--radius);
-    background: rgba(8, 31, 30, 0.6);
+    background: rgba(62, 34, 18, 0.6);
     margin: 4px 0;
     transition: background 0.2s ease;
 }
@@ -82,7 +82,7 @@
 
 .control-center .control-center-list .notification .notification-default-action:hover,
 .control-center .control-center-list .notification .notification-action:hover {
-    background-color: rgba(114, 137, 133, 0.2);
+    background-color: rgba(123, 108, 103, 0.2);
 }
 
 .control-center .control-center-list .notification .notification-content,
@@ -91,7 +91,7 @@
 }
 
 .close-button {
-    background: rgba(114, 137, 133, 0.2);
+    background: rgba(123, 108, 103, 0.2);
     color: var(--text);
     border: none;
     border-radius: 100%;
@@ -129,13 +129,13 @@
 }
 
 .notification-content .time {
-    color: rgba(164, 196, 190, 0.5);
+    color: rgba(180, 157, 150, 0.5);
     font-size: 11px;
     margin-left: auto;
 }
 
 .notification-action {
-    background: rgba(114, 137, 133, 0.25);
+    background: rgba(123, 108, 103, 0.25);
     color: var(--text);
     border: none;
     border-radius: 24px;
@@ -153,8 +153,8 @@
     margin: 6px 8px;
     padding: 8px 10px;
     border-radius: var(--radius);
-    background: rgba(8, 31, 30, 0.4);
-    border: 1px solid rgba(114, 137, 133, 0.2);
+    background: rgba(62, 34, 18, 0.4);
+    border: 1px solid rgba(123, 108, 103, 0.2);
 }
 
 .widget-title {
@@ -171,7 +171,7 @@
 }
 
 .widget-title > button {
-    background: rgba(114, 137, 133, 0.3);
+    background: rgba(123, 108, 103, 0.3);
     color: var(--text);
     border: none;
     border-radius: 24px;
@@ -198,7 +198,7 @@
 }
 
 .widget-dnd switch {
-    background: rgba(114, 137, 133, 0.3);
+    background: rgba(123, 108, 103, 0.3);
     border: none;
     border-radius: 24px;
     transition: all 0.2s ease;
@@ -217,7 +217,7 @@
 }
 
 .widget-mpris {
-    background: rgba(8, 31, 30, 0.5);
+    background: rgba(62, 34, 18, 0.5);
 }
 
 .widget-mpris > box > button {
@@ -225,7 +225,7 @@
     min-width: 32px;
     min-height: 32px;
     padding: 4px;
-    background: rgba(114, 137, 133, 0.2);
+    background: rgba(123, 108, 103, 0.2);
     border: none;
     color: var(--text);
     transition: all 0.2s ease;
@@ -246,7 +246,7 @@
 }
 
 .widget-volume {
-    background: rgba(8, 31, 30, 0.5);
+    background: rgba(62, 34, 18, 0.5);
 }
 
 .widget-volume > box > label {
@@ -256,13 +256,13 @@
 }
 
 .widget-volume trough {
-    background: rgba(114, 137, 133, 0.25);
+    background: rgba(123, 108, 103, 0.25);
     border-radius: 24px;
     min-height: 6px;
 }
 
 .widget-volume trough highlight {
-    background: linear-gradient(90deg, var(--accent), rgba(5, 220, 177, 0.6));
+    background: linear-gradient(90deg, var(--accent), rgba(220, 62, 7, 0.6));
     border-radius: 24px;
     min-height: 6px;
 }
@@ -277,8 +277,8 @@
 
 .widget-buttons-grid > box > button {
     border-radius: var(--radius);
-    background: rgba(114, 137, 133, 0.15);
-    border: 1px solid rgba(114, 137, 133, 0.2);
+    background: rgba(123, 108, 103, 0.15);
+    border: 1px solid rgba(123, 108, 103, 0.2);
     color: var(--text2);
     padding: 8px 4px;
     font-size: 11px;
@@ -286,7 +286,7 @@
 }
 
 .widget-buttons-grid > box > button:hover {
-    background: rgba(5, 220, 177, 0.2);
+    background: rgba(220, 62, 7, 0.2);
     border-color: var(--accent);
     color: var(--accent);
 }
@@ -337,14 +337,14 @@ scrollbar {
 }
 
 scrollbar slider {
-    background: rgba(114, 137, 133, 0.5);
+    background: rgba(123, 108, 103, 0.5);
     border-radius: 24px;
     min-width: 4px;
     transition: all 0.2s ease;
 }
 
 scrollbar slider:hover {
-    background: rgba(114, 137, 133, 0.8);
+    background: rgba(123, 108, 103, 0.8);
 }
 
 @keyframes notification-in {
@@ -360,6 +360,6 @@ scrollbar slider:hover {
 
 @keyframes pulse {
     0%   { border-color: var(--critical); }
-    50%  { border-color: rgba(114, 137, 133, 0.5); }
+    50%  { border-color: rgba(123, 108, 103, 0.5); }
     100% { border-color: var(--critical); }
 }

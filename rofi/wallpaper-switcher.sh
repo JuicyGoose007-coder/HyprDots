@@ -16,7 +16,7 @@ while IFS= read -r file; do
   fi
   # Use full filename as key — no extension stripping, no ambiguous re-matching
   entries+="${name}\0icon\x1f${thumb}\n"
-done < <(find "$WALLPAPER_DIR" -maxdepth 1 -type f \
+done < <(find -L "$WALLPAPER_DIR" -maxdepth 1 -type f \
   \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
   -o -iname '*.webp' -o -iname '*.gif' \) |
   sort)
