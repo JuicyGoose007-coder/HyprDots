@@ -1,0 +1,24 @@
+ignore-empty-password
+disable-caps-lock-text
+font=Cantarelle Regular
+#font-size=9
+
+screenshots
+effect-blur=7x5
+effect-vignette=0.5:0.5
+indicator
+indicator-radius=120
+indicator-thickness=20
+clock
+timestr=%I:%M %p
+datestr=%A, %d %B
+ring-color=A4C4BE
+key-hl-color=e96b05
+line-color=000205
+separator-color=728985
+inside-color=081F1E
+bs-hl-color=dc6205
+layout-bg-color=081F1E
+layout-border-color=A4C4BE
+layout-text-color=a4c4be
+text-color=a4c4be

@@ -1,0 +1,6 @@
+configuration {
+    hover-select: true;
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "MouseSecondary";
+    case-sensitive: false;
+}

@@ -1,0 +1,98 @@
+@import "/home/juicygoose007/.config/rofi/colors.rasi"
+/* wallpaper switcher */
+
+configuration {
+    show-icons: true;
+    display-dmenu: " Wallpaper";
+}
+
+* {
+    font: "Inter Medium 13";
+    bg0: @r-bg0;
+    bg1: @r-bg1;
+    fg0: @r-fg0;
+    fg1: @r-fg1;
+    accent-light: @r-wp-al;
+    transparent: #00000000;
+}
+
+window {
+    background-color: @transparent;
+    border: 0;
+    width: 1200px;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    background-color: @bg0;
+    border-radius: 24px;
+    border: 2px solid;
+    border-color: @r-wp-b1;
+    padding: 20px;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: @bg1;
+    border-radius: 24px;
+    border: 2px solid;
+    border-color: @r-wp-b2;
+    padding: 14px 18px;
+    margin: 0 4px 16px 4px;
+    children: [prompt, entry];
+    spacing: 10px;
+}
+
+prompt {
+    background-color: @transparent;
+    text-color: @accent-light;
+}
+
+entry {
+    background-color: @transparent;
+    text-color: @fg1;
+    cursor: text;
+    placeholder: "Search wallpapers...";
+    placeholder-color: @r-bg3;
+}
+
+listview {
+    background-color: @transparent;
+    columns: 3;
+    lines: 2;
+    scrollbar: false;
+    spacing: 3px;
+    fixed-height: true;
+}
+
+element {
+    background-color: @bg0;
+    border-radius: 24px;
+    border: 1px solid;
+    border-color: @transparent;
+    padding: 10px 14px;
+    spacing: 14px;
+}
+
+element selected {
+    background-color: @r-wp-sel;
+    border-color: @r-wp-sel-b;
+}
+
+element-icon {
+    background-color: @r-wp-icon;
+    border-radius: 8px;
+    size: 192px;
+}
+
+element-text {
+    background-color: @transparent;
+    text-color: @fg0;
+    font: "Inter Medium Bold 13";
+    vertical-align: 0.5;
+}
+
+element-text selected {
+    text-color: @accent-light;
+}

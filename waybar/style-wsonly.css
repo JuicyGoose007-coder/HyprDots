@@ -1,0 +1,66 @@
+/* Theme: japan-green.png */
+@define-color bg0     #000205;
+@define-color bg1     #081F1E;
+@define-color bg2     #728985;
+@define-color bg3     #A4C4BE;
+@define-color fg0     #a4c4be;
+@define-color fg1     #cde6e0;
+@define-color white   #ffffff;
+@define-color cyan    #dcd307;
+@define-color teal    #dc6404;
+@define-color blue    #dc8908;
+@define-color pink    #dc6205;
+@define-color lblue   #05dcb1;
+@define-color magenta #07dcc9;
+@define-color green   #e96b05;
+@define-color purple  #06dccc;
+@define-color sky     #dc6307;
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family:
+        "JetBrainsMono Nerd Font Propo", "Inter Medium", "Font Awesome 7 Free",
+        Roboto, sans-serif;
+    font-size: 20px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#workspaces,
+#niri-workspaces {
+    background-color: alpha(@bg0, 0.95);
+    border-radius: 16px;
+    padding: 2px 6px;
+    margin: 1px 0;
+}
+
+#workspaces button,
+#niri-workspaces button {
+    background: transparent;
+    color: @bg2;
+    padding: 0 8px;
+    border-radius: 12px;
+    margin: 0 2px;
+    font-size: 16px;
+    min-height: 24px;
+}
+
+#workspaces button.empty,
+#niri-workspaces button.empty {
+    color: @bg1;
+}
+
+#workspaces button:hover,
+#niri-workspaces button:hover {
+    color: @fg0;
+}
+
+#workspaces button.active,
+#niri-workspaces button.active {
+    color: @purple;
+    box-shadow: inset 0 -2px @purple;
+}
