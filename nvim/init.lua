@@ -257,7 +257,7 @@ require("blink.cmp").setup({
 })
 
 -- Treesitter
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter.config").setup({
 	ensure_installed = {
 		"python",
 		"lua",

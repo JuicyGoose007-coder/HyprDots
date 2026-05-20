@@ -1,8 +1,8 @@
 #!/bin/bash
 set -euo pipefail
 
-REPO="https://github.com/JuicyGoose007-coder/IHT.git"
-DEST="$HOME/IHT"
+REPO="https://github.com/JuicyGoose007-coder/HyprDots.git"
+DEST="$HOME/HyprDots"
 
 mkdir -p ~/.config ~/Pictures
 
