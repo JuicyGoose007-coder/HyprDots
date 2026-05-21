@@ -156,7 +156,7 @@ hl.bind(
 		[=[grim -g "$(hyprctl activewindow -j | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')" "$HOME/Pictures/screenshots/Screenshot from $(date '+%Y-%m-%d %H-%M-%S').png"]=]
 	)
 )
-hl.bind("CTRL + ALT + DELETE", hl.dsp.exit())
+hl.bind("CTRL + ALT + TAB", hl.dsp.exit())
 hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("hyprctl dispatch dpms off"))
 hl.bind("SUPER + SHIFT + ESCAPE", hl.dsp.exec_cmd("~/.config/rofi/hypr-keybinds.sh"))
 
