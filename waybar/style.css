@@ -1,20 +1,20 @@
 /* Theme: masks.png */
-@define-color bg0     #2B1512;
-@define-color bg1     #3E2212;
-@define-color bg2     #7B6C67;
-@define-color bg3     #B09A93;
-@define-color fg0     #b49d96;
-@define-color fg1     #e6d5cf;
-@define-color white   #ffffff;
-@define-color cyan    #dcc708;
-@define-color teal    #dc8303;
-@define-color blue    #0aacdc;
-@define-color pink    #dc5104;
-@define-color lblue   #dc3e07;
-@define-color magenta #098fdc;
-@define-color green   #ff9604;
-@define-color purple  #088edc;
-@define-color sky     #dc5306;
+@define-color bg0     COLOR;
+@define-color bg1     COLOR;
+@define-color bg2     COLOR;
+@define-color bg3     COLOR;
+@define-color fg0     COLOR;
+@define-color fg1     COLOR;
+@define-color white   COLOR;
+@define-color cyan    COLOR;
+@define-color teal    COLOR;
+@define-color blue    COLOR;
+@define-color pink    COLOR;
+@define-color lblue   COLOR;
+@define-color magenta COLOR;
+@define-color green   COLOR;
+@define-color purple  COLOR;
+@define-color sky     COLOR;
 
 
 

@@ -7,21 +7,21 @@ configuration {
 * {
     font:          "JetBrainsMono Nerd Font 11";
 
-    base:          #2B1512ff;
-    surface:       #3E2212ff;
-    overlay:       #7B6C67ff;
-    muted:         #B09A93ff;
-    text:          #e6d5cfff;
-    subtext:       #b49d96ff;
-    blue:          #0aacdcff;
-    purple:        #088edcff;
-    teal:          #dc8303ff;
+    base:          COLOR;
+    surface:       COLOR;
+    overlay:       COLOR;
+    muted:         COLOR;
+    text:          COLOR;
+    subtext:       COLOR;
+    blue:          COLOR;
+    purple:        COLOR;
+    teal:          COLOR;
 
-    transparent:   #00000000;
-    blue-dim:      #0aacdc20;
-    blue-border:   #0aacdc50;
-    purple-dim:    #088edc15;
-    purple-border: #088edc45;
+    transparent:   COLOR;
+    blue-dim:      COLOR;
+    blue-border:   COLOR;
+    purple-dim:    COLOR;
+    purple-border: COLOR;
 }
 
 window {
