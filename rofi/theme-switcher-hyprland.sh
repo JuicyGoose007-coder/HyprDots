@@ -2112,6 +2112,23 @@ EOF
   echo "$icons" | sed "s/fg = \"#[0-9a-fA-F]\{6\}\"/fg = \"${ACCENT_LBLUE}\"/g" >>"$file"
 }
 
+generate_lazygit() {
+        local file="$HOME/.config/lazygit/config.yml"
+        [[ -f "$file" ]] || return 0
+
+    sed -i \
+    -e "s/^[[:space:]]*activeBorderColor: .*/  activeBorderColor: [\"${ACCENT_BLUE}\", \"bold\"]/" \
+    -e "s/^[[:space:]]*inactiveBorderColor: .*/  inactiveBorderColor: [\"${BG2}\"]/" \
+    -e "s/^[[:space:]]*searchingActiveBorderColor: .*/  searchingActiveBorderColor: [\"${ACCENT_TEAL}\", \"bold\"]/" \
+    -e "s/^[[:space:]]*optionsTextColor: .*/  optionsTextColor: [\"${ACCENT_BLUE}\"]/" \
+    -e "s/^[[:space:]]*selectedLineBgColor: .*/  selectedLineBgColor: [\"${BG1}\"]/" \
+    -e "s/^[[:space:]]*cherryPickedCommitFgColor: .*/  cherryPickedCommitFgColor: [\"${ACCENT_BLUE}\"]/" \
+    -e "s/^[[:space:]]*cherryPickedCommitBgColor: .*/  cherryPickedCommitBgColor: [\"${BG2}\"]/" \
+    -e "s/^[[:space:]]*unstagedChangesColor: .*/  unstagedChangesColor: [\"${ACCENT_PINK}\"]/" \
+    -e "s/^[[:space:]]*defaultFgColor: .*/  defaultFgColor: [\"${FG1}\"]/" \
+    "$file"
+}
+
 current_wallpaper() {
   local wp
   wp=$(awww query 2>/dev/null | awk -F'image: ' '/image: /{print $2; exit}')
@@ -2278,6 +2295,7 @@ generate_all() {
   generate_wlogout
   generate_starship
   generate_yazi
+  generate_lazygit
 }
 
 # ── Reload running applications ─────────────────────────────────────
