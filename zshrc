@@ -257,7 +257,8 @@ if command -v zoxide >/dev/null 2>&1; then
     alias cd='z'
 fi
 
-export GITHUB_PERSONAL_ACCESS_TOKEN=
+# export GITHUB_PERSONAL_ACCESS_TOKEN=
+
 # bun completions
 [ -s "/home/juicygoose007/.bun/_bun" ] && source "/home/juicygoose007/.bun/_bun"
 
