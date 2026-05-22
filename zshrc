@@ -260,10 +260,9 @@ fi
 # export GITHUB_PERSONAL_ACCESS_TOKEN=
 
 # bun completions
-[ -s "/home/juicygoose007/.bun/_bun" ] && source "/home/juicygoose007/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "/home/juicygoose007/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-alias claude-mem='/home/juicygoose007/.bun/bin/bun "/home/juicygoose007/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
