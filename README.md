@@ -4,8 +4,7 @@ Hyprland dotfiles by JuicyGoose007.
 
 ## Prerequisites
 
-- Arch Linux (or Arch-based distro)
-- `paru` installed (AUR helper)
+- CachyOS (or Arch-based distro)
 
 ## Step 1: Clone the repository
 
@@ -28,10 +27,26 @@ chmod +x scripts/*.sh
 
 Deploys configs to `~/.config`, applies the SDDM theme, and installs all required packages via `paru`.
 
-## Step 4: Mount games drive (Optional)
+## Step 4: Set Zsh as default shell (Optional)
+
+```bash
+chsh -s /usr/bin/zsh
+```
+
+Log out and back in to apply. Only needed if you want the custom `.zshrc`.
+
+## Step 5: Mount games drive (Optional)
 
 ```bash
 ./scripts/fstab.sh
 ```
 
 Mounts a dedicated ext4 drive to `/mnt/storage` for Steam game libraries.
+
+## Troubleshooting
+
+### SDDM not starting on boot
+
+```bash
+sudo systemctl enable sddm --now
+```
