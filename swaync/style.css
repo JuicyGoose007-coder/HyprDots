@@ -6,16 +6,16 @@
 
 :root {
     --bg:           COLOR;
-    --bg-rgb:       43, 21, 18;
+    --bg-rgb:       0, 2, 5;
     --surface:      COLOR;
-    --surface-rgb:  62, 34, 18;
+    --surface-rgb:  8, 31, 30;
     --border:       COLOR;
-    --border-rgb:   123, 108, 103;
+    --border-rgb:   114, 137, 133;
     --text:         COLOR;
-    --text-rgb:     180, 157, 150;
+    --text-rgb:     164, 196, 190;
     --text2:        COLOR;
     --accent:       COLOR;
-    --accent-rgb:   220, 62, 7;
+    --accent-rgb:   5, 220, 177;
     --accent2:      COLOR;
     --critical:     COLOR;
     --critical-rgb: COLOR_RGB;

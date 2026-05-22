@@ -26,7 +26,7 @@ vim.g.maplocalleader = " "
 -- Options
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
@@ -74,10 +74,11 @@ require("vim._core.ui2").enable({
 	},
 })
 
--- Force Transparent background
--- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
--- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+if vim.fn.executable("rg") == 1 then
+	-- set repgrip as the grep program and tell it to format output for quickfix
+	vim.opt.grepprg = "rg --vimgrep --smart-case"
+	vim.opt.grepformat = "%f:%1:%c:%m"
+end
 
 -- Mini (kept for ai, operators, pairs, surround — no good replacements)
 require("mini.ai").setup()
@@ -358,6 +359,17 @@ vim.keymap.set("n", "<leader>/", "<cmd>FzfLua blines<cr>", { desc = "Search curr
 vim.keymap.set("n", "<leader>fb", "<cmd>FzfLua buffers<cr>", { desc = "Find buffers" })
 vim.keymap.set("n", "<leader>fc", "<cmd>FzfLua commands<cr>", { desc = "Commands" })
 vim.keymap.set("n", "<leader>fk", "<cmd>FzfLua keymaps<cr>", { desc = "Keymaps" })
+vim.keymap.set("n", "<leader>*", "<cmd>FzfLua grep_cword<cr>", { desc = "Grep word under cursor" })
+vim.keymap.set("x", "<leader>gv", "<cmd>FzfLua grep_visual<cr>", { desc = "Grep visual selection" })
+
+-- Grep in current file via quickfix
+vim.keymap.set("n", "<leader>s*", "<cmd>grep! <cword> %<cr>", { desc = "Grep word in current file" })
+
+-- Quickfix navigation
+vim.keymap.set("n", "<leader>qo", "<cmd>copen<cr>", { desc = "Open quickfix" })
+vim.keymap.set("n", "<leader>qc", "<cmd>cclose<cr>", { desc = "Close quickfix" })
+vim.keymap.set("n", "]q", "<cmd>cnext<cr>", { desc = "Next quickfix" })
+vim.keymap.set("n", "[q", "<cmd>cprev<cr>", { desc = "Prev quickfix" })
 
 -- Harpoon
 vim.keymap.set("n", "<leader>ha", function()
