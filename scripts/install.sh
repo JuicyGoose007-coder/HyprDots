@@ -2,7 +2,7 @@
 set -euo pipefail
 
 REPO="https://github.com/JuicyGoose007-coder/HyprDots.git"
-DEST="$HOME/HyprDots"
+DEST="${DEST:-$HOME/HyprDots}"
 
 mkdir -p ~/.config ~/Pictures
 
@@ -14,21 +14,27 @@ else
   git clone "$REPO" "$DEST"
 fi
 
-echo ">> Installing packages..."
-bash "$DEST/scripts/pkgs.sh" || echo ">> Warning: some packages failed to install, continuing..."
-
 echo ">> Unpacking dotfiles..."
 cp "$DEST/zshrc" ~/.zshrc
 
-for dir in starship fastfetch ghostty niri swaylock nvim yazi waybar tmux dunst wofi rofi wlogout; do
-  cp -rfT "$DEST/$dir" ~/.config/$dir
+for dir in starship fastfetch ghostty nvim yazi waybar tmux rofi wlogout hypr swaync lazygit wallust; do
+    if [ -d "$DEST/$dir" ]; then
+        cp -rfT "$DEST/$dir" ~/.config/$dir
+    else 
+        echo ">> Warning: $DEST/$dir not found, skipping..."
+    fi
 done
 
-cp -rfT "$DEST/wallpapers" ~/Pictures/wallpapers
+if [ -d "$DEST/wallpapers" ]; then
+    cp -rfT "$DEST/wallpapers" ~/Pictures/wallpapers
+fi
+    
 cp -rfT "$DEST/scripts" ~/scripts
-cp -rfT "$DEST/Rust" ~/Rust
 
-echo ">> Applying system configs (requires sudo)..."
-sudo cp "$DEST/sddm.conf" /etc/sddm.conf
+echo ">> Applying SDDM theme and config..."
+bash "$DEST/scripts/sddm.sh"
+
+echo ">> Installing packages..."
+bash "$DEST/scripts/pkgs.sh" || echo ">> Warning: some packages failed to install, continuing..."
 
 echo ">> Done! Dotfiles installed."
