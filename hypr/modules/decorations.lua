@@ -49,7 +49,19 @@ hl.config({
 			vibrancy = 0.1696,
 		},
 	},
+})
 
+-- Blur behind waybar
+hl.layer_rule({
+    blur = true,
+    match = { namespace = "waybar" }
+})
+hl.layer_rule({
+    ignore_alpha = 0,
+    match = { namespace = "waybar" }
+})
+
+hl.config({
 	animations = {
 		enabled = true,
 	},
