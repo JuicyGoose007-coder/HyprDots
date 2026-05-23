@@ -1,4 +1,4 @@
-/* Theme: japan-green.png — clipboard history picker */
+/* Theme: tentacles.png — clipboard history picker */
 
 configuration {
     show-icons:          false;
@@ -7,21 +7,21 @@ configuration {
 * {
     font:          "JetBrainsMono Nerd Font 11";
 
-    base:          #000205ff;
-    surface:       #081F1Eff;
-    overlay:       #728985ff;
-    muted:         #A4C4BEff;
-    text:          #cde6e0ff;
-    subtext:       #a4c4beff;
-    blue:          #dc8908ff;
-    purple:        #06dcccff;
-    teal:          #dc6404ff;
+    base:          #311A1Dff;
+    surface:       #342728ff;
+    overlay:       #64676Bff;
+    muted:         #8F9399ff;
+    text:          #dddfe6ff;
+    subtext:       #a8acb4ff;
+    blue:          #dc9a09ff;
+    purple:        #0898dcff;
+    teal:          #dc0ac2ff;
 
     transparent:   #00000000;
-    blue-dim:      #dc890820;
-    blue-border:   #dc890850;
-    purple-dim:    #06dccc15;
-    purple-border: #06dccc45;
+    blue-dim:      #dc9a0920;
+    blue-border:   #dc9a0950;
+    purple-dim:    #0898dc15;
+    purple-border: #0898dc45;
 }
 
 window {

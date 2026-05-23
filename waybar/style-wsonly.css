@@ -1,20 +1,20 @@
-/* Theme: japan-green.png */
-@define-color bg0     #000205;
-@define-color bg1     #081F1E;
-@define-color bg2     #728985;
-@define-color bg3     #A4C4BE;
-@define-color fg0     #a4c4be;
-@define-color fg1     #cde6e0;
+/* Theme: tentacles.png */
+@define-color bg0     #311A1D;
+@define-color bg1     #342728;
+@define-color bg2     #64676B;
+@define-color bg3     #8F9399;
+@define-color fg0     #a8acb4;
+@define-color fg1     #dddfe6;
 @define-color white   #ffffff;
-@define-color cyan    #dcd307;
-@define-color teal    #dc6404;
-@define-color blue    #dc8908;
-@define-color pink    #dc6205;
-@define-color lblue   #05dcb1;
-@define-color magenta #07dcc9;
-@define-color green   #e96b05;
-@define-color purple  #06dccc;
-@define-color sky     #dc6307;
+@define-color cyan    #0671dc;
+@define-color teal    #dc0ac2;
+@define-color blue    #dc9a09;
+@define-color pink    #4ddc08;
+@define-color lblue   #0a5edc;
+@define-color magenta #0895dc;
+@define-color green   #dc09c2;
+@define-color purple  #0898dc;
+@define-color sky     #49dc09;
 
 * {
     border: none;

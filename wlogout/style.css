@@ -6,15 +6,15 @@
 }
 
 window {
-	background-color: rgba(COLOR);
+	background-color: rgba(49, 26, 29, 0.9);
 }
 
 button {
     border-radius: 0;
-    border-color: COLOR;
-	text-decoration-color: COLOR;
-    color: COLOR;
-	background-color: COLOR;
+    border-color: #64676B;
+	text-decoration-color: #dddfe6;
+    color: #dddfe6;
+	background-color: #342728;
 	border-style: solid;
 	border-width: 1px;
 	background-repeat: no-repeat;
@@ -23,7 +23,7 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: COLOR;
+	background-color: #0898dc;
 	outline-style: none;
 }
 
