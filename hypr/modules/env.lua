@@ -13,8 +13,8 @@ hl.env("QT_QPA_PLATFORM", "wayland")
 hl.env("QT_WAYLAND_DISABLE_WINDOWDECORATION", "1")
 hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")
-hl.env("COLORTERM", "truecolor")
-hl.env("TERM", "xterm-256color")
+-- hl.env("COLORTERM", "truecolor")
+-- hl.env("TERM", "xterm-256color")
 
 -- Nvidia
 hl.env("LIBVA_DRIVER_NAME", "nvidia")

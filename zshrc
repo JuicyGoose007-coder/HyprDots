@@ -10,6 +10,7 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
+unalias zi 2>/dev/null || true 
 
 # ============================================================================
 # BASIC ZSH CONFIGURATION
@@ -152,6 +153,7 @@ alias j='jobs'
 alias c='clear'
 alias y='yazi'
 alias nv='nvim'
+alias oc='opencode'
 alias rb='reboot'
 
 # Install/Remove
@@ -258,7 +260,6 @@ if command -v zoxide >/dev/null 2>&1; then
 fi
 
 # export GITHUB_PERSONAL_ACCESS_TOKEN=
-
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
