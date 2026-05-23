@@ -56,5 +56,5 @@ sudo systemctl enable sddm --now
 If GTK apps don't match the dark theme, run:
 
 ```bash
-gsettings set org.gnome.desktop.interface gtk-theme adw-gtk-theme
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 ```
