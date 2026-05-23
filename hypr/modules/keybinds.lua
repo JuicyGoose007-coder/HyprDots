@@ -141,7 +141,7 @@ hl.bind("SUPER + CTRL + j", hl.dsp.window.move({ monitor = "d" }))
 hl.bind(
 	"CTRL + S",
 	hl.dsp.exec_cmd(
-		'grim -g "$(slurp)" "$HOME/Pictures/screenshots/Screenshot from $(date \'+%Y-%m-%d %H-%M-%S\').png"'
+		'grim -g "$(slurp)" "$HOME/Pictures/screenshots/screenshot from $(date \'+%Y-%m-%d %H-%M-%S\').png"'
 	)
 )
 hl.bind(

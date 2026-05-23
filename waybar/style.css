@@ -352,6 +352,12 @@
 
 
 
+
+
+
+
+
+
 * {
   border: none;
   border-radius: 0;
@@ -439,7 +445,7 @@ window#waybar.hidden {
   color: #000;
 }
 #wireplumber:hover {
-  background-color: @magenta;
+  background-color: @blue;
   color: #000;
 }
 #custom-notification:hover {
@@ -592,7 +598,7 @@ window#waybar.hidden {
 }
 
 #wireplumber {
-  color: @magenta;
+  color: @blue;
 }
 
 #wireplumber.muted {
@@ -600,8 +606,17 @@ window#waybar.hidden {
 }
 
 #custom-notification {
-  color: @blue;
+  color: @teal;
   font-size: 16px;
+}
+
+#custom-notification.notification {
+  color: #ff0000;
+}
+
+#custom-notification.dnd-none,
+#custom-notification.dnd-notification {
+  color: @fg0;
 }
 
 #custom-power {
