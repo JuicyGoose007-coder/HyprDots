@@ -306,7 +306,7 @@ EOF
   local file_full="$HOME/.config/waybar/style.css"
   if [[ -f "$file_full" ]]; then
     local body
-    body=$(sed -n '18,$p' "$file_full")
+    body=$(sed -n '18,$p' "$file_full" | awk 'NF{p=1} p')
     printf '%s\n\n%s\n' "$header" "$body" >"$file_full"
   fi
 
