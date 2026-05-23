@@ -40,8 +40,8 @@ window#waybar {
 
 #workspaces button,
 #niri-workspaces button {
-    background: transparent;
-    color: @bg2;
+    background-color: @teal;
+    color: #000;
     padding: 0 8px;
     border-radius: 12px;
     margin: 0 2px;
@@ -51,7 +51,8 @@ window#waybar {
 
 #workspaces button.empty,
 #niri-workspaces button.empty {
-    color: @bg1;
+    background-color: @blue;
+    color: #000;
 }
 
 #workspaces button:hover,
@@ -61,6 +62,6 @@ window#waybar {
 
 #workspaces button.active,
 #niri-workspaces button.active {
-    color: @purple;
-    box-shadow: inset 0 -2px @purple;
+    background-color: @purple;
+    color: #000;
 }
