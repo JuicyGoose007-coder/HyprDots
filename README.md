@@ -50,3 +50,11 @@ Mounts a dedicated ext4 drive to `/mnt/storage` for Steam game libraries.
 ```bash
 sudo systemctl enable sddm --now
 ```
+
+### GTK theme not applied
+
+If GTK apps don't match the dark theme, run:
+
+```bash
+gsettings set org.gnome.desktop.interface gtk-theme adw-gtk-theme
+```

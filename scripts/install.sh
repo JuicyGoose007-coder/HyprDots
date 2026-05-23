@@ -37,4 +37,8 @@ bash "$DEST/scripts/sddm.sh"
 echo ">> Installing packages..."
 bash "$DEST/scripts/pkgs.sh" || echo ">> Warning: some packages failed to install, continuing..."
 
+sed -i "s|/var/cache/hyprpm/juicygoose007|/var/cache/hyprpm/$USER|g" ~/.config/hypr/hyprland.lua
+hyprpm add https://github.com/hyprland-community/hymission || true
+hyprpm enable hymission || true
+
 echo ">> Done! Dotfiles installed."

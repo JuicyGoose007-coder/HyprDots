@@ -260,7 +260,7 @@ fi
 # export GITHUB_PERSONAL_ACCESS_TOKEN=
 
 # bun completions
-[ -s "$HOME/.bun/_bun" ] && source "/home/juicygoose007/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
