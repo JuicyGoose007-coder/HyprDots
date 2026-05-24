@@ -18,15 +18,15 @@ gui:
   shortTimeFormat: "3:04PM"
   mouseEvents: true
   theme:
-  activeBorderColor: ["#dc9a09", "bold"]
-  inactiveBorderColor: ["#64676B"]
-  searchingActiveBorderColor: ["#dc0ac2", "bold"]
-  optionsTextColor: ["#dc9a09"]
-  selectedLineBgColor: ["#342728"]
-  cherryPickedCommitFgColor: ["#dc9a09"]
-  cherryPickedCommitBgColor: ["#64676B"]
-  unstagedChangesColor: ["#4ddc08"]
-  defaultFgColor: ["#dddfe6"]
+  activeBorderColor: ["#a6dc07", "bold"]
+  inactiveBorderColor: ["#538882"]
+  searchingActiveBorderColor: ["#dc7907", "bold"]
+  optionsTextColor: ["#a6dc07"]
+  selectedLineBgColor: ["#432722"]
+  cherryPickedCommitFgColor: ["#a6dc07"]
+  cherryPickedCommitBgColor: ["#538882"]
+  unstagedChangesColor: ["#e92906"]
+  defaultFgColor: ["#aee6de"]
 git:
   pagers:
     - colorArg: always
