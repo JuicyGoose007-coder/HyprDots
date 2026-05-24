@@ -81,7 +81,7 @@ vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "Rename" })
 
 -- Format
 vim.keymap.set("n", "<leader>cf", function()
-	vim.lsp.buf.format({ async = true })
+	require("conform").format({ async = true, lsp_fallback = true })
 end, { desc = "Format file" })
 
 -- Undotree

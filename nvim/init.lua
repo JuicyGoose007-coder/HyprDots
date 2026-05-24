@@ -5,6 +5,7 @@ vim.pack.add({ { src = "https://github.com/echasnovski/mini.nvim" } }, { load = 
 vim.pack.add({ { src = "https://github.com/nvim-treesitter/nvim-treesitter" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/nyoom-engineering/oxocarbon.nvim" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/mason-org/mason.nvim" } }, { load = true })
+vim.pack.add({ { src = "https://github.com/mason-org/mason-lspconfig.nvim" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/stevearc/conform.nvim" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/christoomey/vim-tmux-navigator" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/Saghen/blink.lib" } }, { load = true })

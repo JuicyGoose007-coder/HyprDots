@@ -53,12 +53,12 @@ hl.config({
 
 -- Blur behind waybar
 hl.layer_rule({
-    blur = true,
-    match = { namespace = "waybar" }
+	blur = true,
+	match = { namespace = "waybar" },
 })
 hl.layer_rule({
-    ignore_alpha = 0,
-    match = { namespace = "waybar" }
+	ignore_alpha = 0,
+	match = { namespace = "waybar" },
 })
 
 hl.config({

@@ -15,7 +15,7 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("uwsm app -s b -t service -- wl-paste --watch cliphist store")
 	hl.exec_cmd("uwsm app -s b -t service -- wl-paste --type image --watch cliphist store")
 
--- Normal start
+	-- Normal start
 	hl.exec_cmd("hymission")
 	hl.exec_cmd("hyprctl dispatch workspace name:Main")
 end)

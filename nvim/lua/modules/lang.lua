@@ -25,6 +25,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- LSP
 require("mason").setup()
+require("mason-lspconfig").setup({
+	automatic_installation = true,
+})
 
 local lsp_servers = { "pyright", "lua_ls", "rust_analyzer", "html", "cssls", "taplo", "yamlls", "jsonls" }
 for _, server in ipairs(lsp_servers) do
