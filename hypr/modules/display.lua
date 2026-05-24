@@ -17,3 +17,20 @@ hl.monitor({
 	position = "0x0",
 	scale = 1,
 })
+
+----------------
+----  MISC  ----
+----------------
+
+hl.config({
+	misc = {
+		force_default_wallpaper = 1,
+		disable_hyprland_logo = true,
+	},
+})
+
+hl.config({
+	cursor = {
+		min_refresh_rate = 24,
+	},
+})
