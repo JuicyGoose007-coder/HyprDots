@@ -9,7 +9,14 @@ vim.pack.add({ { src = "https://github.com/mason-org/mason-lspconfig.nvim" } }, 
 vim.pack.add({ { src = "https://github.com/stevearc/conform.nvim" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/christoomey/vim-tmux-navigator" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/Saghen/blink.lib" } }, { load = true })
-vim.pack.add({ { src = "https://github.com/Saghen/blink.cmp", build = "cargo build --release" } }, { load = true })
+vim.pack.add({
+	{
+		src = "https://github.com/Saghen/blink.cmp",
+		build = function()
+			require("blink.cmp").build():wait(60000)
+		end,
+	},
+}, { load = true })
 vim.pack.add({ { src = "https://github.com/rafamadriz/friendly-snippets" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/jiaoshijie/undotree" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/ibhagwan/fzf-lua" } }, { load = true })
