@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "c573a15a62bd0bfd4006ee0849b24f5404395500",
+      "rev": "82efc953a6121822fda1974241a4d1af74c6c026",
       "src": "https://github.com/Saghen/blink.cmp"
     },
     "blink.lib": {
@@ -9,7 +9,7 @@
       "src": "https://github.com/Saghen/blink.lib"
     },
     "conform.nvim": {
-      "rev": "086a40dc7ed8242c03be9f47fbcee68699cc2395",
+      "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
       "src": "https://github.com/stevearc/conform.nvim"
     },
     "dashboard-nvim": {
@@ -21,7 +21,7 @@
       "src": "https://github.com/rafamadriz/friendly-snippets"
     },
     "fzf-lua": {
-      "rev": "834246377489f9a1e6d4df570a7874a48c644b56",
+      "rev": "c8aaa74c97157b2c62bdcfc1e57b15c052dc63ca",
       "src": "https://github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
@@ -50,7 +50,7 @@
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.nvim": {
-      "rev": "418ef4930ddabe80f449c6f1323f8b6abb172d1c",
+      "rev": "44657837c7338e52727facc85c1d95bec1f6bd7c",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
     "nvim-lspconfig": {
@@ -66,7 +66,7 @@
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
     "oil.nvim": {
-      "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
+      "rev": "b91ee5a77a6a9605d9c1aaf4fda74b66082c8297",
       "src": "https://github.com/stevearc/oil.nvim"
     },
     "oxocarbon.nvim": {
@@ -94,7 +94,7 @@
       "src": "https://github.com/folke/which-key.nvim"
     },
     "yazi.nvim": {
-      "rev": "e7094dcfd897600e02a23e8334cdfeb9ee07dc17",
+      "rev": "74cbb8829cc695ea84ffaf1544efa9a3b11addf5",
       "src": "https://github.com/mikavilpas/yazi.nvim"
     }
   }
