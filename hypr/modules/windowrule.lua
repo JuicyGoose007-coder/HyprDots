@@ -65,13 +65,6 @@ hl.window_rule({
 })
 
 hl.window_rule({
-	name = "discord",
-	match = { title = "Discord" },
-	no_focus = true,
-	workspace = "name:Discord",
-})
-
-hl.window_rule({
 	name = "ghostty-appid",
 	match = { class = "com\\.mitchellh\\.ghostty" },
 	fullscreen = false,
@@ -153,14 +146,14 @@ hl.window_rule({
 	float = true,
 })
 
--- hl.window_rule({
--- 	name = "firefox",
--- 	match = { class = "^firefox$" },
--- 	workspace = "2",
--- })
-
 hl.window_rule({
 	name = "vesktop",
 	match = { class = "^vesktop$" },
+	workspace = "name:Discord",
+})
+
+hl.window_rule({
+	name = "riptide",
+	match = { class = "^com\\.mitchellh\\.ghostty$", title = "riptide" },
 	workspace = "name:Discord",
 })
