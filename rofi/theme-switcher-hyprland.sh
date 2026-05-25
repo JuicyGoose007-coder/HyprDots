@@ -20,7 +20,7 @@ for cmd in wallust jq; do
 done
 
 # ── Directories ──────────────────────────────────────────────────────
-WALLPAPER_DIR="$HOME/HyprDots/wallpapers"
+WALLPAPER_DIR="$HOME/Pictures/wallpapers"
 CACHE_DIR="$HOME/.cache/theme-switcher"
 THUMB_DIR="$CACHE_DIR/thumbs"
 STYLE="$HOME/.config/rofi/theme-switcher.rasi"
@@ -2133,7 +2133,7 @@ current_wallpaper() {
   local wp
   wp=$(awww query 2>/dev/null | awk -F'image: ' '/image: /{print $2; exit}')
   if [[ -z "$wp" || ! -f "$wp" ]]; then
-    wp=$(find -"$HOME/HyprDots/wallpapers" -maxdepth 1 -type f \
+    wp=$(find "$HOME/Pictures/wallpapers" -maxdepth 1 -type f \
       \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \
          -o -iname '*.webp' \) | sort | head -1)
   fi
@@ -2305,6 +2305,9 @@ reload_all() {
 
   # Hyprland: update border colors immediately (lua parser requires eval, not keyword)
   hyprctl eval "hl.config({ general = { col = { active_border = \"rgba(${ACCENT_LBLUE#\#}ff)\", inactive_border = \"rgba(${BG0#\#}ff)\" } } })" 2>/dev/null || true
+
+  # Hyprlock: reload config (SIGUSR2 triggers config reload in hyprlock >= 0.3.0)
+  pgrep -x hyprlock &>/dev/null && killall -SIGUSR2 hyprlock 2>/dev/null || true
 
   # Ghostty: live update existing surfaces via OSC, plus SIGUSR2 for new windows.
   # SIGUSR2 alone only applies palette/theme to *new* surfaces in 1.x; OSC pokes
