@@ -1,4 +1,3 @@
-require("modules.env")
 hl.plugin.load("/var/cache/hyprpm/juicygoose007/hymission/hymission.so")
 require("modules.display")
 require("modules.programs")
