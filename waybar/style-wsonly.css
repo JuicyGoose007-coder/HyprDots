@@ -1,20 +1,20 @@
-/* Theme: Akiakane.jpg */
-@define-color bg0     #41100E;
-@define-color bg1     #432722;
-@define-color bg2     #538882;
-@define-color bg3     #77C3BA;
-@define-color fg0     #77c3ba;
-@define-color fg1     #aee6de;
+/* Theme: tentacles.png */
+@define-color bg0     #311A1D;
+@define-color bg1     #342728;
+@define-color bg2     #64676B;
+@define-color bg3     #8F9399;
+@define-color fg0     #a8acb4;
+@define-color fg1     #dddfe6;
 @define-color white   #ffffff;
-@define-color cyan    #085bdc;
-@define-color teal    #dc7907;
-@define-color blue    #a6dc07;
-@define-color pink    #e92906;
-@define-color lblue   #01dcc2;
-@define-color magenta #d308dc;
-@define-color green   #dc7906;
-@define-color purple  #d007dc;
-@define-color sky     #dc2607;
+@define-color cyan    #0671dc;
+@define-color teal    #dc0ac2;
+@define-color blue    #dc9a09;
+@define-color pink    #4ddc08;
+@define-color lblue   #0a5edc;
+@define-color magenta #0895dc;
+@define-color green   #dc09c2;
+@define-color purple  #0898dc;
+@define-color sky     #49dc09;
 
 * {
     border: none;
