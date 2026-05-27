@@ -158,5 +158,4 @@ hl.window_rule({
 	name = "riptide",
 	match = { class = "^com\\.mitchellh\\.ghostty$", title = "riptide" },
 	workspace = "name:Discord",
-	no_initial_focus = true,
 })
