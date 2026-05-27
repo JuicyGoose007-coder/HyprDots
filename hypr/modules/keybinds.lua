@@ -33,6 +33,9 @@ hl.bind(
 	)
 )
 
+-- Hyprselect
+hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("~/hyprselect/target/debug/hyprselect"))
+
 -- Hymission overview
 hl.bind("SUPER + TAB", hl.plugin.hymission.toggle)
 hl.bind("SUPER + A", function()
