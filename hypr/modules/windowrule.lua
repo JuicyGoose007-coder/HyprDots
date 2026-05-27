@@ -42,20 +42,21 @@ hl.window_rule({
 	name = "steam-client",
 	match = { class = "^(steam|Steam)$" },
 	workspace = "name:Gaming",
+	no_initial_focus = true,
 })
 
 hl.window_rule({
 	name = "battlenet",
 	match = { class = "steam_app_0", title = "Battle.net" },
-	no_focus = true,
 	workspace = "name:Gaming",
+	no_initial_focus = true,
 })
 
 hl.window_rule({
 	name = "battlenet-login",
 	match = { class = "steam_app_0", title = "Battle\\.net Login" },
-	no_focus = true,
 	workspace = "name:Gaming",
+	no_initial_focus = true,
 })
 
 hl.window_rule({
@@ -150,10 +151,12 @@ hl.window_rule({
 	name = "vesktop",
 	match = { class = "^vesktop$" },
 	workspace = "name:Discord",
+	no_initial_focus = true,
 })
 
 hl.window_rule({
 	name = "riptide",
 	match = { class = "^com\\.mitchellh\\.ghostty$", title = "riptide" },
 	workspace = "name:Discord",
+	no_initial_focus = true,
 })
