@@ -68,6 +68,7 @@ hl.window_rule({
 hl.window_rule({
 	name = "ghostty-appid",
 	match = { class = "com\\.mitchellh\\.ghostty" },
+	focus_on_activate = true,
 	fullscreen = false,
 	opacity = 0.9,
 })
@@ -158,4 +159,5 @@ hl.window_rule({
 	name = "riptide",
 	match = { class = "^com\\.mitchellh\\.ghostty$", title = "riptide" },
 	workspace = "name:Discord",
+	no_initial_focus = true,
 })
