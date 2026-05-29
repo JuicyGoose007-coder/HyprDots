@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #
 # System-wide theme switcher — generates Material You palettes from
-# wallpapers via matugen, applies them to all desktop applications.
 #
 
 set -uo pipefail
