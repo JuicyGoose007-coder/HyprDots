@@ -179,7 +179,7 @@ derive_description() {
 		# Fallback: check full buffer for known patterns (e.g., long bracket strings)
 		if [[ -z "$cmd_str" ]]; then
 			if [[ "$buffer" == *"activewindow"* ]]; then
-				cmd_str="grim activewindow"
+				cmd_str="hyprshot activewindow"
 			fi
 		fi
 		if [[ -n "$cmd_str" ]]; then
@@ -206,9 +206,9 @@ derive_description() {
 				*playerctl*next*) echo "Next Track"; return ;;
 				*playerctl*previous*) echo "Previous Track"; return ;;
 				*playerctl*play-pause*) echo "Play/Pause"; return ;;
-			*grim*slurp*) echo "Screenshot (Area)"; return ;;
-			*grim*activewindow*|*\[=*activewindow*) echo "Screenshot (Window)"; return ;;
-			*grim*) echo "Screenshot (Monitor)"; return ;;
+			*hyprshot*region*) echo "Screenshot (Area)"; return ;;
+			*hyprshot*window*) echo "Screenshot (Window)"; return ;;
+			*hyprshot*) echo "Screenshot (Monitor)"; return ;;
 				*dpms\ off*) echo "DPMS Off"; return ;;
 			esac
 		fi

@@ -99,7 +99,7 @@ derive_label() {
 		[[ -z "$cmd_str" && "$buffer" =~ exec_cmd\([[:space:]]*([a-zA-Z_][a-zA-Z0-9_]*)[[:space:]]*\) ]] && cmd_str="${BASH_REMATCH[1]}"
 
 		# Fallback: check full buffer for patterns in long bracket strings
-		[[ -z "$cmd_str" && "$buffer" == *"activewindow"* ]] && cmd_str="grim activewindow"
+		[[ -z "$cmd_str" && "$buffer" == *"activewindow"* ]] && cmd_str="hyprshot activewindow"
 
 		if [[ -n "$cmd_str" ]]; then
 			case "$cmd_str" in
@@ -115,8 +115,8 @@ derive_label() {
 				*brightnessctl*5%\+*) echo "Bright Up" ;; *brightnessctl*5%-*) echo "Bright Down" ;;
 				*playerctl*next*) echo "Next Track" ;; *playerctl*previous*) echo "Prev Track" ;;
 				*playerctl*play-pause*) echo "Play/Pause" ;;
-				*grim*slurp*) echo "Screenshot Area" ;; *grim*activewindow*|*\[=*activewindow*) echo "Screenshot Win" ;;
-				*grim*) echo "Screenshot" ;; *dpms\ off*) echo "DPMS Off" ;;
+				*hyprshot*region*) echo "Screenshot Area" ;; *hyprshot*window*) echo "Screenshot Win" ;;
+				*hyprshot*) echo "Screenshot" ;; *dpms\ off*) echo "DPMS Off" ;;
 				*) echo "Run $(basename "$cmd_str" | sed 's/\.sh//')" ;;
 			esac
 			return

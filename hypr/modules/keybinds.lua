@@ -140,25 +140,10 @@ hl.bind("SUPER + CTRL + k", hl.dsp.window.move({ monitor = "u" }))
 hl.bind("SUPER + CTRL + j", hl.dsp.window.move({ monitor = "d" }))
 
 -- System (Niri-style)
--- Screenshots: requires grim + slurp
-hl.bind(
-	"CTRL + S",
-	hl.dsp.exec_cmd(
-		'grim -g "$(slurp)" "$HOME/Pictures/screenshots/screenshot from $(date \'+%Y-%m-%d %H-%M-%S\').png"'
-	)
-)
-hl.bind(
-	"CTRL + SHIFT + P",
-	hl.dsp.exec_cmd(
-		"grim -o \"$(hyprctl monitors -j | jq -r '.[] | select(.focused).name')\" \"$HOME/Pictures/screenshots/Screenshot from $(date '+%Y-%m-%d %H-%M-%S').png\""
-	)
-)
-hl.bind(
-	"CTRL + SHIFT + W",
-	hl.dsp.exec_cmd(
-		[=[grim -g "$(hyprctl activewindow -j | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')" "$HOME/Pictures/screenshots/Screenshot from $(date '+%Y-%m-%d %H-%M-%S').png"]=]
-	)
-)
+-- Screenshots: requires hyprshot
+hl.bind("CTRL + S", hl.dsp.exec_cmd("hyprshot -m region -o ~/Pictures/screenshots"))
+hl.bind("CTRL + SHIFT + P", hl.dsp.exec_cmd("hyprshot -m output -o ~/Pictures/screenshots"))
+hl.bind("CTRL + SHIFT + W", hl.dsp.exec_cmd("hyprshot -m window -o ~/Pictures/screenshots"))
 hl.bind("CTRL + ALT + TAB", hl.dsp.exit())
 hl.bind("SUPER + SHIFT + P", hl.dsp.exec_cmd("hyprctl dispatch dpms off"))
 hl.bind("SUPER + SHIFT + ESCAPE", hl.dsp.exec_cmd("~/.config/rofi/hypr-keybinds.sh"))
