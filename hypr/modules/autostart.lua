@@ -24,7 +24,7 @@ hl.on("hyprland.start", function()
 	-- Normal start --
 	hl.exec_cmd("hymission")
 
-	-- Focus Main workspace via DP-2
+	-- Focus Ghostty on Main workspace via DP-2
 	hl.exec_cmd("hyprctl dispatch focusmonitor DP-2")
 	hl.exec_cmd("hyprctl dispatch focuswindow class:^com\\.mitchellh\\.ghostty$")
 end)
