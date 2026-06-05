@@ -6,7 +6,7 @@
   "control-center-layer": "top",
   "layer-shell": true,
   "cssPriority": "user",
-  "control-center-positionX": "center",
+  "control-center-positionX": "right ",
   "control-center-margin-top": 8,
   "control-center-margin-bottom": 8,
   "control-center-margin-right": 8,
