@@ -1,5 +1,4 @@
 configuration {
-	font: "JetBrainsMono Nerd Font";
     hover-select: true;
     me-select-entry: "MousePrimary";
     me-accept-entry: "MouseSecondary";
