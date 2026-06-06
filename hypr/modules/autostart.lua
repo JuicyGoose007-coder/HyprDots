@@ -19,7 +19,7 @@ hl.on("hyprland.start", function()
 
 	-- Main --
 	hl.exec_cmd("uwsm app -- ghostty", { workspace = "name:Main" })
-	hl.exec_cmd("uwsm app -- firefox", { workspace = "name:Main" })
+	hl.exec_cmd("uwsm app -- zen-browser", { workspace = "name:Main" })
 
 	-- Normal start --
 	hl.exec_cmd("hymission")
