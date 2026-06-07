@@ -1,20 +1,20 @@
-/* Theme: tentacles.png */
-@define-color bg0     #311A1D;
-@define-color bg1     #342728;
-@define-color bg2     #64676B;
-@define-color bg3     #8F9399;
-@define-color fg0     #a8acb4;
-@define-color fg1     #dddfe6;
+/* Theme: anime_skull.png */
+@define-color bg0     #000100;
+@define-color bg1     #401310;
+@define-color bg2     #776262;
+@define-color bg3     #AA8D8C;
+@define-color fg0     #b49594;
+@define-color fg1     #e6cfcd;
 @define-color white   #ffffff;
-@define-color cyan    #0671dc;
-@define-color teal    #dc0ac2;
-@define-color blue    #dc9a09;
-@define-color pink    #4ddc08;
-@define-color lblue   #0a5edc;
-@define-color magenta #0895dc;
-@define-color green   #dc09c2;
-@define-color purple  #0898dc;
-@define-color sky     #49dc09;
+@define-color cyan    #a2dc0a;
+@define-color teal    #dc073f;
+@define-color blue    #dc09b9;
+@define-color pink    #dc7202;
+@define-color lblue   #dc0e06;
+@define-color magenta #32dc07;
+@define-color green   #dc0740;
+@define-color purple  #33dc07;
+@define-color sky     #dc7204;
 
 * {
     border: none;
