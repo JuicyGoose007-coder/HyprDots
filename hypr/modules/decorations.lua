@@ -99,6 +99,8 @@ hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" 
 hl.config({
 	dwindle = {
 		preserve_split = true, -- You probably want this
+		smart_resizing = true,
+		use_active_for_splits = true,
 	},
 })
 
@@ -115,5 +117,6 @@ hl.config({
 		fullscreen_on_one_column = true,
 		focus_fit_method = 1,
 		explicit_column_widths = "0.33333, 0.5, 0.66667",
+		direction = "right",
 	},
 })
