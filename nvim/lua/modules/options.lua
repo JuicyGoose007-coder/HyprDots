@@ -21,7 +21,7 @@ vim.opt.smartcase = true
 vim.opt.cursorline = true
 
 if vim.fn.executable("rg") == 1 then
-	-- set repgrip as the grep program and tell it to format output for quickfix
+	-- set ripgrep as the grep program and tell it to format output for quickfix
 	vim.opt.grepprg = "rg --vimgrep --smart-case"
 	vim.opt.grepformat = "%f:%1:%c:%m"
 end
