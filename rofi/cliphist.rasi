@@ -1,4 +1,4 @@
-/* Theme: anime_skull.png — clipboard history picker */
+/* Theme: train.png — clipboard history picker */
 
 configuration {
     show-icons:          false;
@@ -7,21 +7,21 @@ configuration {
 * {
     font:          "JetBrainsMono Nerd Font 11";
 
-    base:          #000100ff;
-    surface:       #401310ff;
-    overlay:       #776262ff;
-    muted:         #AA8D8Cff;
-    text:          #e6cfcdff;
-    subtext:       #b49594ff;
-    blue:          #dc09b9ff;
-    purple:        #33dc07ff;
-    teal:          #dc073fff;
+    base:          #221F25ff;
+    surface:       #43383Cff;
+    overlay:       #66666Cff;
+    muted:         #91929Bff;
+    text:          #dddee6ff;
+    subtext:       #a8a9b4ff;
+    blue:          #dc075aff;
+    purple:        #5a0adcff;
+    teal:          #0967dcff;
 
     transparent:   #00000000;
-    blue-dim:      #dc09b920;
-    blue-border:   #dc09b950;
-    purple-dim:    #33dc0715;
-    purple-border: #33dc0745;
+    blue-dim:      #dc075a20;
+    blue-border:   #dc075a50;
+    purple-dim:    #5a0adc15;
+    purple-border: #5a0adc45;
 }
 
 window {

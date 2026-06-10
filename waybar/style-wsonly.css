@@ -1,20 +1,20 @@
-/* Theme: anime_skull.png */
-@define-color bg0     #000100;
-@define-color bg1     #401310;
-@define-color bg2     #776262;
-@define-color bg3     #AA8D8C;
-@define-color fg0     #b49594;
-@define-color fg1     #e6cfcd;
+/* Theme: train.png */
+@define-color bg0     #221F25;
+@define-color bg1     #43383C;
+@define-color bg2     #66666C;
+@define-color bg3     #91929B;
+@define-color fg0     #a8a9b4;
+@define-color fg1     #dddee6;
 @define-color white   #ffffff;
-@define-color cyan    #a2dc0a;
-@define-color teal    #dc073f;
-@define-color blue    #dc09b9;
-@define-color pink    #dc7202;
-@define-color lblue   #dc0e06;
-@define-color magenta #32dc07;
-@define-color green   #dc0740;
-@define-color purple  #33dc07;
-@define-color sky     #dc7204;
+@define-color cyan    #c20adc;
+@define-color teal    #0967dc;
+@define-color blue    #dc075a;
+@define-color pink    #dd0748;
+@define-color lblue   #091fdc;
+@define-color magenta #5e0adc;
+@define-color green   #086edc;
+@define-color purple  #5a0adc;
+@define-color sky     #dc0748;
 
 * {
     border: none;
