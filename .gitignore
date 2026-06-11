@@ -1,2 +1,10 @@
 .zshrc_secrets
 hypr/hyprlock.conf
+
+# Theme-generated files
+waybar/style.css
+waybar/style-wsonly.css
+swaync/style.css
+wlogout/style.css
+rofi/colors.rasi
+rofi/cliphist.rasi
