@@ -131,6 +131,12 @@ alias sudo='sudo '
 
 # Update
 alias update='paru -Syu'
+alias upd='~/scripts/update.sh'
+
+# Hyprland
+alias hc='hyprctl clients'
+alias hr='hyprctl reload'
+alias hra='hyprctl reload-all'
 
 if command -v eza >/dev/null 2>&1; then
     alias ls='eza --color=always'
@@ -155,11 +161,17 @@ alias y='yazi'
 alias nv='nvim'
 alias oc='opencode'
 alias rb='reboot'
+alias rt='riptide'
+alias wm='wiremix'
 
 # Install/Remove
 alias install='paru -S '
 alias remove='sudo pacman -Rs '
 alias remove-all='sudo pacman -Rns '
+
+# Orphan pkgs
+alias orphan-check='pacman -Qdtq'
+alias remove-orphan='sudo pacman -Rns $(pacman -Qdtq)'
 
 alias g='git'
 alias gs='git status'
@@ -259,7 +271,9 @@ if command -v zoxide >/dev/null 2>&1; then
     alias cd='z'
 fi
 
-# export GITHUB_PERSONAL_ACCESS_TOKEN=
+# GitHub access token
+[ -f "$HOME/.zshrc_secrets" ] && source "$HOME/.zshrc_secrets"
+
 # bun completions
 [ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
@@ -267,3 +281,11 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+
+# Added by vibez installer
+export PATH="${HOME}/.local/bin:${PATH}"
+
+# OpenCode Vim
+export PATH="/home/juicygoose007/.ocv/bin:$PATH"
+
+. "$HOME/.local/share/../bin/env"
