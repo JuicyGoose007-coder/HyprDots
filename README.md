@@ -45,12 +45,6 @@ Mounts a dedicated ext4 drive to `/mnt/storage` for Steam game libraries.
 
 ## Troubleshooting
 
-### SDDM not starting on boot
-
-```bash
-sudo systemctl enable sddm --now
-```
-
 ### GTK theme not applied
 
 If GTK apps don't match the dark theme, run:
