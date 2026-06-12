@@ -1,10 +1,16 @@
 .zshrc_secrets
 hypr/hyprlock.conf
 
-# Theme-generated files
-waybar/style.css
-waybar/style-wsonly.css
-swaync/style.css
-wlogout/style.css
-rofi/colors.rasi
+# Theme-generated files (only change with theme switcher)
+ghostty/themes/noctalia
+hypr/modules/theme.lua
+lazygit/config.yml
 rofi/cliphist.rasi
+rofi/colors.rasi
+starship/starship.toml
+swaync/style.css
+tmux/tmux.conf
+waybar/style-wsonly.css
+waybar/style.css
+wlogout/style.css
+yazi/flavors/noctalia.yazi/flavor.toml
