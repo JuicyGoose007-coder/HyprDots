@@ -41,7 +41,7 @@ Log out and back in to apply. Only needed if you want the custom `.zshrc`.
 ./scripts/fstab.sh
 ```
 
-Mounts a dedicated ext4 drive to `/mnt/storage` for Steam game libraries.
+Mounts a dedicated ext4 drive to `/run/media/juicygoose007/` for Steam game libraries.
 
 ## Troubleshooting
 
