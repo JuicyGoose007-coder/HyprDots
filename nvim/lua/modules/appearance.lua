@@ -1,5 +1,13 @@
 -- Colorscheme
-vim.cmd.colorscheme("oxocarbon")
+require("nordic").setup({
+	bold_keywords = true,
+	italic_comments = true,
+	transparent = {
+		bg = true,
+		float = true,
+	},
+})
+vim.cmd.colorscheme("nordic")
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 

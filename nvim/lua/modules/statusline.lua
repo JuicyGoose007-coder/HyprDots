@@ -1,12 +1,12 @@
 -- Statusline
-vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { fg = "#161616", bg = "#33b1ff", bold = true })
-vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { fg = "#161616", bg = "#78a9ff", bold = true })
-vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", { fg = "#161616", bg = "#ee5396", bold = true })
-vim.api.nvim_set_hl(0, "MiniStatuslineModeReplace", { fg = "#161616", bg = "#ff7eb6", bold = true })
-vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { fg = "#161616", bg = "#be95ff", bold = true })
-vim.api.nvim_set_hl(0, "MiniStatuslineFilename", { fg = "#dde1e7", bg = "#262626" })
-vim.api.nvim_set_hl(0, "MiniStatuslineFileinfo", { fg = "#525252", bg = "#161616" })
-vim.api.nvim_set_hl(0, "MiniStatuslineInactive", { fg = "#525252", bg = "#161616" })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { fg = "#2E3440", bg = "#88C0D0", bold = true })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { fg = "#2E3440", bg = "#81A1C1", bold = true })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", { fg = "#2E3440", bg = "#BF616A", bold = true })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeReplace", { fg = "#2E3440", bg = "#D08770", bold = true })
+vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { fg = "#2E3440", bg = "#B48EAD", bold = true })
+vim.api.nvim_set_hl(0, "MiniStatuslineFilename", { fg = "#D8DEE9", bg = "#3B4252" })
+vim.api.nvim_set_hl(0, "MiniStatuslineFileinfo", { fg = "#4C566A", bg = "#2E3440" })
+vim.api.nvim_set_hl(0, "MiniStatuslineInactive", { fg = "#4C566A", bg = "#2E3440" })
 local statusline = require("mini.statusline")
 local mode_map = {
 	["n"] = { "N", "MiniStatuslineModeNormal" },

@@ -5,11 +5,11 @@ vim.api.nvim_create_autocmd("FileType", {
 	callback = function()
 		vim.b.miniindentscope_disable = true
 		require("ibl").setup_buffer(0, { enabled = false })
-		vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#33b1ff", bold = true })
-		vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#525252", italic = true })
-		vim.api.nvim_set_hl(0, "DashboardShortCut", { fg = "#ee5396" })
-		vim.api.nvim_set_hl(0, "DashboardDesc", { fg = "#dde1e7" })
-		vim.api.nvim_set_hl(0, "DashboardIcon", { fg = "#42be65" })
+		vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#88C0D0", bold = true })
+		vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#4C566A", italic = true })
+		vim.api.nvim_set_hl(0, "DashboardShortCut", { fg = "#BF616A" })
+		vim.api.nvim_set_hl(0, "DashboardDesc", { fg = "#D8DEE9" })
+		vim.api.nvim_set_hl(0, "DashboardIcon", { fg = "#A3BE8C" })
 	end,
 })
 require("dashboard").setup({
@@ -75,4 +75,3 @@ require("dashboard").setup({
 		footer = { "", "  neovim  —  stay sharp" },
 	},
 })
-
