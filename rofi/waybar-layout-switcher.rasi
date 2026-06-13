@@ -71,7 +71,7 @@ entry {
 listview {
     background-color: @transparent;
     columns:          1;
-    lines:            3;
+    lines:            4;
     scrollbar:        false;
     spacing:          4px;
     fixed-height:     true;

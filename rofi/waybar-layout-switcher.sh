@@ -32,6 +32,8 @@ restart_waybar() {
   if [[ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]]; then
     if [[ "$layout" == "wsonly" ]]; then
       config="config-hyprland-wsonly"
+    elif [[ "$layout" == "new" ]]; then
+      config="config-hyprland-new"
     else
       config="config-hyprland"
     fi
@@ -56,14 +58,22 @@ current_layout=$(get_waybar_layout)
 if [[ "$current_layout" == "full" ]]; then
   entries="✓ Full Layout\n"
   entries+="  WS-Only Layout\n"
+  entries+="  New Layout\n"
   entries+="  No-Bar\n"
 elif [[ "$current_layout" == "wsonly" ]]; then
   entries="  Full Layout\n"
   entries+="✓ WS-Only Layout\n"
+  entries+="  New Layout\n"
+  entries+="  No-Bar\n"
+elif [[ "$current_layout" == "new" ]]; then
+  entries="  Full Layout\n"
+  entries+="  WS-Only Layout\n"
+  entries+="✓ New Layout\n"
   entries+="  No-Bar\n"
 else
   entries="  Full Layout\n"
   entries+="  WS-Only Layout\n"
+  entries+="  New Layout\n"
   entries+="✓ No-Bar\n"
 fi
 
@@ -72,7 +82,8 @@ selection=$(printf '%b' "$entries" | rofi -dmenu -i -p " Layout" -theme "$STYLE"
 case "$selection" in
   *"Full Layout")     printf 'full'   >"$WAYBAR_LAYOUT_FILE" ;;
   *"WS-Only Layout") printf 'wsonly' >"$WAYBAR_LAYOUT_FILE" ;;
-  *"No-Bar") printf 'nobar' >"$WAYBAR_LAYOUT_FILE" ;;
+  *"New Layout")      printf 'new'    >"$WAYBAR_LAYOUT_FILE" ;;
+  *"No-Bar")          printf 'nobar'  >"$WAYBAR_LAYOUT_FILE" ;;
   *) exit 0 ;;
 esac
 
