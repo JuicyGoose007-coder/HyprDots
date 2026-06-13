@@ -15,6 +15,7 @@ layout="full"
 if [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ] || [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
     case "$layout" in
         wsonly) config="config-hyprland-wsonly"; style="style-wsonly.css" ;;
+        new)    config="config-hyprland-new"    ; style="style.css" ;;
         *)      config="config-hyprland"        ; style="style.css" ;;
     esac
 elif pgrep -x niri >/dev/null; then
