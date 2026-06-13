@@ -48,7 +48,7 @@ setopt HIST_REDUCE_BLANKS
 # PLUGINS & TOOLS (via Zinit)
 # ============================================================================
 
-zinit ice depth=1
+zinit ice depth=1 wait"!" lucid atload'zvm_init'
 zinit light jeffreytse/zsh-vi-mode
 
 zinit ice wait lucid
@@ -63,8 +63,13 @@ zinit light zsh-users/zsh-completions
 zinit ice wait lucid
 zinit light Aloxaf/fzf-tab
 
-zinit ice wait lucid
+zinit ice wait lucid atload'eval "$(zoxide init zsh)"; alias cd=z'
 zinit light ajeetdsouza/zoxide
+
+zinit ice wait"!" lucid \
+      atinit'export STARSHIP_CONFIG=~/.config/starship/starship.toml' \
+      atload'eval "$(starship init zsh)"'
+zinit load zdharma-continuum/null
 
 # ============================================================================
 # COMPLETION & AUTOCOMPLETE
@@ -250,16 +255,16 @@ function zvm_after_select_vi_mode {
   esac
 }
 
-# if [[ -o interactive ]]; then 
-#     if [[ -z "$TMUX" ]]; then
-#         fastfetch
-#     elif [[ "$(tmux display -p '#{pane_index}')" == "$(tmux show -gv pane-base-index)" ]]; then
-#         fastfetch
-#     fi
-# fi
+if [[ -o interactive ]]; then 
+    if [[ -z "$TMUX" ]]; then
+        fastfetch
+    elif [[ "$(tmux display -p '#{pane_index}')" == "$(tmux show -gv pane-base-index)" ]]; then
+        fastfetch
+    fi
+fi
 
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-eval "$(starship init zsh)"
+# export STARSHIP_CONFIG=~/.config/starship/starship.toml
+# eval "$(starship init zsh)"
 
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
