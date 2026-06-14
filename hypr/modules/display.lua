@@ -5,7 +5,7 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
 	output = "DP-2",
-	mode = "2560x1440@165.999",
+	mode = "2560x1440@165.00Hz",
 	position = "1920x0",
 	scale = 1,
 	vrr = 2,

@@ -22,7 +22,7 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd("uwsm app -- zen-browser", { workspace = "name:Main" })
 
 	-- Normal start --
-	hl.exec_cmd("hymission")
+	-- hl.exec_cmd("hymission")
 
 	-- Focus Ghostty on Main workspace via DP-2
 	hl.exec_cmd("hyprctl dispatch focusmonitor DP-2")
