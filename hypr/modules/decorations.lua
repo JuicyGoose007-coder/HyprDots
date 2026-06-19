@@ -2,6 +2,8 @@
 ---- LOOK AND FEEL ----
 -----------------------
 
+local colors = require("colors")
+
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {
@@ -12,8 +14,8 @@ hl.config({
 
 		col = {
 			-- Overridden at runtime by theme-switcher via hyprctl keyword
-			active_border = "rgba(33b1ffff)",
-			inactive_border = "rgba(161616ff)",
+			active_border = colors.primary,
+			inactive_border = colors.secondary,
 		},
 
 		-- Set to true to enable resizing windows by clicking and dragging on borders and gaps
@@ -44,10 +46,22 @@ hl.config({
 
 		blur = {
 			enabled = true,
-			size = 3,
-			passes = 3,
-			vibrancy = 0.1696,
+			size = 6, -- was 2, higher = more spread
+			passes = 4, -- was 2, more passes = smoother/stronger
+			noise = 0.05, -- adds a subtle grain, very frosted-glass-like
+			contrast = 0.9, -- slightly less contrast looks more glassy
+			brightness = 1.0,
+			vibrancy = 0.2,
+			vibrancy_darkness = 1,
+			new_optimizations = true,
 		},
+
+		-- blur = {
+		-- 	enabled = true,
+		-- 	size = 2,
+		-- 	passes = 2,
+		-- 	vibrancy = 0.1696,
+		-- },
 	},
 })
 
