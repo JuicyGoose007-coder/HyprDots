@@ -66,11 +66,6 @@ zinit light Aloxaf/fzf-tab
 zinit ice wait lucid atload'eval "$(zoxide init zsh)"; alias cd=z'
 zinit light ajeetdsouza/zoxide
 
-# zinit ice wait"!" lucid \
-#       atinit'export STARSHIP_CONFIG=~/.config/starship/starship.toml' \
-#       atload'eval "$(starship init zsh)"'
-# zinit load zdharma-continuum/null
-
 # ============================================================================
 # COMPLETION & AUTOCOMPLETE
 # ============================================================================
@@ -136,6 +131,7 @@ alias sudo='sudo '
 
 # Update
 alias update='paru -Syu'
+alias pac-upd='sudo pacman -Syu'
 alias upd='~/scripts/update.sh'
 
 # Hyprland
@@ -171,6 +167,7 @@ alias wm='wiremix'
 
 # Install/Remove
 alias install='paru -S '
+alias pac-install='sudo pacman -S '
 alias remove='sudo pacman -Rs '
 alias remove-all='sudo pacman -Rns '
 
