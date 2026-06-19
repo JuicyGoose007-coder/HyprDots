@@ -14,9 +14,9 @@ layout="full"
 # Pick config and style based on compositor + layout
 if [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ] || [ -n "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
     case "$layout" in
-        wsonly) config="config-hyprland-wsonly"; style="style-wsonly.css" ;;
-        new)    config="config-hyprland-new"    ; style="style.css" ;;
-        *)      config="config-hyprland"        ; style="style.css" ;;
+        wsonly) config="config-hyprland-wsonly.jsonc"; style="style-wsonly.css" ;;
+        sane)    config="sane.jsonc"    ; style="sane.css" ;;
+        *)      config="config-hyprland.jsonc"        ; style="style.css" ;;
     esac
 elif pgrep -x niri >/dev/null; then
     case "$layout" in

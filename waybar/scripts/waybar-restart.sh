@@ -1,10 +1,14 @@
-#!/bin/bash
+#!/usr/bin/bash
+#################
+# JuicyGoose007 #
+#################
+set -euo pipefail
 
-# Kill any running Waybar processes
-pkill -x waybar
+pkill -9 waybar
 
-# Wait briefly to ensure Waybar is fully terminated
-sleep 1
 
-# Start Waybar again
-nohup waybar >/dev/null 2>&1 &
+waybar & disown
+
+#################
+# End of Script #
+#################
