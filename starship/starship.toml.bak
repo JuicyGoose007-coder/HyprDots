@@ -1,0 +1,271 @@
+scan_timeout = 100
+command_timeout = 500
+
+"$schema" = "https://starship.rs/config-schema.json"
+
+follow_symlinks = false
+add_newline = true
+
+format = """
+$os\
+$directory\
+$git_branch\
+${custom.git_worktree}\
+$git_status\
+$fill\
+$cmd_duration\
+$jobs\
+${env_var.VIM_NORMAL}${env_var.VIM_INSERT}${env_var.VIM_VISUAL}\
+$time\
+$line_break\
+$character\
+"""
+
+# palette = "noctalia"
+
+[fill]
+symbol = " "
+
+# ============================================================================
+# LEFT PROMPT SEGMENTS
+# ============================================================================
+
+[os]
+disabled = false
+style = "fg:teal"
+format = "[$symbol ](fg:teal)"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = ""
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CachyOS = "󰌽"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[directory]
+style = "bold fg:blue"
+format = "[$path ]($style)[$read_only]($read_only_style)"
+truncation_length = 4
+truncation_symbol = "…/"
+read_only = "󰌾 "
+read_only_style = "fg:blue"
+home_symbol = "~"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = "󰇚 "
+"Music" = "󰎆 "
+"Pictures" = "󰋩 "
+"Developer" = " "
+"Others" = "󰉖 "
+"Videos" = "󰕧 "
+"Desktop" = "󰟀 "
+"Projects" = " "
+".config" = "󰒓 "
+"repos" = "󰳐 "
+"src" = " "
+
+[git_branch]
+symbol = " "
+style = "fg:green"
+format = "[$symbol$branch ]($style)"
+
+[git_status]
+format = "([$all_status$ahead_behind](fg:green)) "
+style = "fg:green"
+staged = "+${count} "
+modified = "!${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+untracked = "?${count} "
+stashed = "*${count} "
+conflicted = "~${count} "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇡${ahead_count}⇣${behind_count} "
+up_to_date = ""
+
+[custom.git_worktree]
+description = "Show indicator when inside a git worktree"
+command = """
+if git rev-parse --git-dir >/dev/null 2>&1; then
+      common_dir=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
+      git_dir=$(git rev-parse --path-format=absolute --git-dir 2>/dev/null)
+      if [ "$common_dir" != "$git_dir" ]; then
+            echo "⛓"
+      fi
+fi
+"""
+when = "git rev-parse --is-inside-work-tree >/dev/null 2>&1"
+format = "([$output ](fg:crust bg:green))"
+require_repo = true
+ignore_timeout = true
+
+# ============================================================================
+# LINE 2 - PROMPT CHARACTER
+# ============================================================================
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = "[❯](bold fg:lavender)"
+error_symbol = "[❯](bold fg:red)"
+vimcmd_symbol = "[❮](bold fg:lavender)"
+
+# ============================================================================
+# RIGHT PROMPT SEGMENTS
+# ============================================================================
+
+[cmd_duration]
+min_time = 3000
+format = "[󰅐 $duration ](fg:lavender)"
+style = "fg:lavender"
+
+[jobs]
+format = "[ 󰜎 $number ](fg:teal)"
+style = "fg:teal"
+
+[time]
+disabled = false
+time_format = "%I:%M:%S %p"
+format = "[ $time ](fg:text)"
+style = "fg:text"
+
+[env_var.VIM_NORMAL]
+variable = "VIM_NORMAL"
+format = "[ $env_value ](bold bg:red fg:crust)"
+disabled = false
+
+[env_var.VIM_INSERT]
+variable = "VIM_INSERT"
+format = "[ $env_value ](bold bg:sky fg:crust)"
+disabled = false
+
+[env_var.VIM_VISUAL]
+variable = "VIM_VISUAL"
+format = "[ $env_value ](bold bg:mauve fg:crust)"
+disabled = false
+
+# ============================================================================
+# DISABLED
+# ============================================================================
+
+[username]
+disabled = true
+
+[hostname]
+disabled = true
+
+# ============================================================================
+# LANGUAGE MODULES
+# ============================================================================
+
+[package]
+disabled = false
+symbol = "󰏖 "
+format = " [$symbol$version](fg:text)"
+
+[nodejs]
+symbol = "󰎙 "
+format = " [$symbol($version)](fg:green)"
+
+[python]
+symbol = "󰌠 "
+format = " [$symbol($version)](fg:blue)"
+
+[rust]
+symbol = "󱘗 "
+format = " [$symbol($version)](fg:peach)"
+
+[golang]
+symbol = "󰟓 "
+format = " [$symbol($version)](fg:blue)"
+detect_files = ["go.mod"]
+
+[c]
+symbol = " "
+format = " [$symbol($version)](fg:blue)"
+
+[java]
+symbol = "󰬷 "
+format = " [$symbol($version)](fg:red)"
+
+[kotlin]
+symbol = "󱈙 "
+format = " [$symbol($version)](fg:lavender)"
+
+[lua]
+symbol = "󰢱 "
+format = " [$symbol($version)](fg:blue)"
+
+[ruby]
+symbol = "󰴭 "
+format = " [$symbol($version)](fg:red)"
+
+[php]
+symbol = "󰌟 "
+format = " [$symbol($version)](fg:lavender)"
+
+[haskell]
+symbol = "󰲒 "
+format = " [$symbol($version)](fg:lavender)"
+
+[docker_context]
+symbol = "󰡨 "
+format = " [$symbol($context)](fg:blue)"
+
+[memory_usage]
+disabled = true
+
+# ============================================================================
+# PALETTE
+# ============================================================================
+
+# [palettes.noctalia]
+# crust = "#191113"
+# mantle = "#191113"
+# base = "#1A232D"
+#
+# surface0 = "#64676B"
+# surface1 = "#90939A"
+# surface2 = "#a0a3a9"
+#
+# overlay0 = "#90939A"
+# overlay1 = "#a0a3a9"
+# overlay2 = "#b1b3b8"
+#
+# text = "#dddfe6"
+# subtext0 = "#a8abb4"
+# subtext1 = "#dddfe6"
+#
+# rosewater = "#dddfe6"
+# flamingo = "#dc2107"
+# pink = "#dc2107"
+# mauve = "#de2006"
+# red = "#0766dc"
+# maroon = "#dc2107"
+# peach = "#dc2107"
+# yellow = "#e34d38"
+# green = "#dcc409"
+# teal = "#dccb0a"
+# sky = "#07dc7d"
+# sapphire = "#dc0844"
+# blue = "#dc0844"
+# lavender = "#de2006"
