@@ -1,4 +1,5 @@
--- hl.plugin.load("/var/cache/hyprpm/juicygoose007/hymission/hymission.so")
+hl.plugin.load("/var/cache/hyprpm/juicygoose007/hymission/hymission.so")
+local colors = require("colors")
 require("modules.display")
 require("modules.programs")
 require("modules.permissions")
