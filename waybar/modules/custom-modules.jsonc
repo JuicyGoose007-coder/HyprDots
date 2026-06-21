@@ -1,7 +1,7 @@
 {
 "custom/launcher": {
         "format":"󰣇", 
-        "on-click": "~/.config/rofi/launcher.sh"
+        "on-click": "~/.config/rofi/launchers/type-7/launcher.sh"
       },
 
   "custom/notification": {
@@ -45,5 +45,11 @@
     "exec-if": "exit 0",                  // always run; consider advanced run conditions
     "on-click": "ghostty -e sh -c 'sudo pacman -Syu'", // update system
     "signal": 8
+},
+
+"custom/power": {
+    "format": "⏻",
+    "on-click": "~/.config/rofi/scripts/powermenu_t5",
+    "tooltip": false
 },
 }
