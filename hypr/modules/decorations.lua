@@ -14,7 +14,7 @@ hl.config({
 
 		col = {
 			-- Overridden at runtime by theme-switcher via hyprctl keyword
-			active_border = colors.primary,
+			active_border = colors.inverse_primary,
 			inactive_border = colors.secondary,
 		},
 
@@ -74,6 +74,16 @@ hl.layer_rule({
 	ignore_alpha = 0,
 	match = { namespace = "waybar" },
 })
+
+-- Blur behind rofi
+-- hl.layer_rule({
+-- 	blur = true,
+-- 	match = { namespace = "rofi" },
+-- })
+-- hl.layer_rule({
+-- 	ignore_alpha = 0,
+-- 	match = { namespace = "waybar" },
+-- })
 
 hl.config({
 	animations = {

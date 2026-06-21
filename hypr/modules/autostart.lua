@@ -16,15 +16,17 @@ hl.on("hyprland.start", function()
 	-- Workspaces --
 
 	-- Discord --
-	hl.exec_cmd("uwsm app -s b -t service -- vesktop")
+	hl.exec_cmd("uwsm app -s b -t service -- vesktop", { workspace = "name:Discord silent" })
 	-- hl.exec_cmd("sleep 2 && uwsm app -s b -t service -- ghostty --title=riptide -e zsh -ic riptide")
 
 	-- Main --
 	hl.exec_cmd("uwsm app -- ghostty", { workspace = "name:Main" })
 	-- hl.exec_cmd("uwsm app -- zen-browser", { workspace = "name:Main" })
 
-	-- Normal start --
-	hl.exec_cmd("hymission")
+	-- Load hymission plugin
+	hl.exec_cmd(
+		"hyprctl plugin load /home/juicygoose007/.local/share/hypr/plugins/hymission-src/build-cmake/libhymission.so"
+	)
 
 	-- Focus Ghostty on Main workspace via DP-2
 	hl.exec_cmd("hyprctl dispatch focusmonitor DP-2")

@@ -17,13 +17,15 @@ end)
 -- Applications
 hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
-hl.bind("SUPER + D", hl.dsp.exec_cmd("~/.config/rofi/launcher.sh"))
+hl.bind("SUPER + D", hl.dsp.exec_cmd("~/.config/rofi/launchers/type-7/launcher.sh"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("zen-browser"))
 hl.bind("SUPER + O", hl.dsp.exec_cmd("brave"))
 hl.bind("SUPER + ALT + L", hl.dsp.exec_cmd("hyprlock"))
 hl.bind("SUPER + P", hl.dsp.exec_cmd("~/.config/rofi/wallpaper-switcher.sh"))
 hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd("~/.config/rofi/theme-switcher-hyprland.sh"))
 hl.bind("SUPER + Y", hl.dsp.exec_cmd("ghostty -e zsh -ic yazi"))
+-- hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("wlogout -b 5"))
+hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("~/.config/rofi/scripts/powermenu_t5"))
 
 -- Cliphist
 hl.bind(

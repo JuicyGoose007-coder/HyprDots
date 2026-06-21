@@ -18,7 +18,6 @@ hl.config({
 
 		touchpad = {
 			tap_to_click = true,
-			natural_scroll = true,
 		},
 	},
 })
@@ -57,7 +56,7 @@ hl.plugin.hymission.gesture({
 	mode = "layout",
 })
 
--- Native alternative:
+-- -- -- Native alternative:
 -- hl.gesture({ fingers = 3, direction = "horizontal", action = "scroll_move" })
 
 hl.plugin.hymission.gesture({
