@@ -288,6 +288,10 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
+# Theme-switcher
+export PATH="HOME/.local/bin/:$PATH"
+export PATH="HOME/.local/bin/:$PATH"
+
 # Wordle-tui
 export PATH="$HOME/.cargo/bin/:$PATH"
 
