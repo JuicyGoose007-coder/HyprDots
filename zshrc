@@ -288,11 +288,8 @@ fi
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-
-# Added by vibez installer
-export PATH="${HOME}/.local/bin:${PATH}"
-
-# OpenCode Vim
-export PATH="/home/juicygoose007/.ocv/bin:$PATH"
+# Wordle-tui
+export PATH="$HOME/.cargo/bin/:$PATH"
 
 . "$HOME/.local/share/../bin/env"
+
