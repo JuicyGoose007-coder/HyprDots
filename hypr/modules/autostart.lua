@@ -20,7 +20,10 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd("sleep 2 && uwsm app -s b -t service -- ghostty --title=riptide -e zsh -ic riptide")
 
 	-- Main --
-	hl.exec_cmd("uwsm app -- ghostty", { workspace = "name:Main" })
+	hl.exec_cmd("uwsm app -- ghostty", {
+		workspace = "name:Main",
+		float = true,
+	})
 	-- hl.exec_cmd("uwsm app -- zen-browser", { workspace = "name:Main" })
 
 	-- Load hymission plugin
