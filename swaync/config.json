@@ -96,6 +96,9 @@
     "inhibitors": {
       "text": "Inhibitors",
       "clear-all-button": false
+    },
+    "notifications": {
+      "vexpand": true
     }
   }
 }
