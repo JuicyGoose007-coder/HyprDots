@@ -55,13 +55,6 @@ hl.config({
 			vibrancy_darkness = 1,
 			new_optimizations = true,
 		},
-
-		-- blur = {
-		-- 	enabled = true,
-		-- 	size = 2,
-		-- 	passes = 2,
-		-- 	vibrancy = 0.1696,
-		-- },
 	},
 })
 
@@ -75,15 +68,23 @@ hl.layer_rule({
 	match = { namespace = "waybar" },
 })
 
--- Blur behind rofi
--- hl.layer_rule({
--- 	blur = true,
--- 	match = { namespace = "rofi" },
--- })
--- hl.layer_rule({
--- 	ignore_alpha = 0,
--- 	match = { namespace = "waybar" },
--- })
+-- Blur behind swaync
+hl.layer_rule({
+	blur = true,
+	match = { namespace = "swaync-control-center" },
+})
+hl.layer_rule({
+	ignore_alpha = 0.3,
+	match = { namespace = "swaync-control-center" },
+})
+hl.layer_rule({
+	blur = true,
+	match = { namespace = "swaync-notification-window" },
+})
+hl.layer_rule({
+	ignore_alpha = 0.35,
+	match = { namespace = "swaync-notification-window" },
+})
 
 hl.config({
 	animations = {
