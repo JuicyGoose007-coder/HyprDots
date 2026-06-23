@@ -58,6 +58,16 @@ hl.config({
 	},
 })
 
+-- Blur Rofi
+hl.layer_rule({
+	blur = true,
+	match = { namespace = "rofi" },
+})
+hl.layer_rule({
+	ignore_alpha = 0,
+	match = { namespace = "rofi" },
+})
+
 -- Blur behind waybar
 hl.layer_rule({
 	blur = true,

@@ -9,7 +9,7 @@ local closeWindowBind = hl.bind("SUPER + Q", hl.dsp.window.close(), { repeating 
 
 -- Opacity toggle (like Niri's MOD+T: toggle-window-rule-opacity)
 local opacity_toggled = false
-hl.bind("SUPER + T", function()
+hl.bind("SUPER + O", function()
 	opacity_toggled = not opacity_toggled
 	hl.config({ decoration = { inactive_opacity = opacity_toggled and 1.0 or 0.9 } })
 end)
@@ -19,13 +19,10 @@ hl.bind("SUPER + RETURN", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + E", hl.dsp.exec_cmd(fileManager))
 hl.bind("SUPER + D", hl.dsp.exec_cmd("~/.config/rofi/launchers/type-7/launcher.sh"))
 hl.bind("SUPER + B", hl.dsp.exec_cmd("zen-browser"))
-hl.bind("SUPER + O", hl.dsp.exec_cmd("brave"))
 hl.bind("SUPER + ALT + L", hl.dsp.exec_cmd("hyprlock"))
-hl.bind("SUPER + P", hl.dsp.exec_cmd("~/.config/rofi/wallpaper-switcher.sh"))
-hl.bind("SUPER + SHIFT + D", hl.dsp.exec_cmd("walset"))
+hl.bind("SUPER + T", hl.dsp.exec_cmd("walset"))
 hl.bind("SUPER + Y", hl.dsp.exec_cmd("ghostty -e zsh -ic yazi"))
--- hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("wlogout -b 5"))
-hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("~/.config/rofi/scripts/powermenu_t5"))
+hl.bind("SUPER + ALT + P", hl.dsp.exec_cmd("~/.config/rofi/scripts/powermenu_t4"))
 
 -- Cliphist
 hl.bind(
