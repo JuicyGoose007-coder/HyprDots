@@ -8,7 +8,7 @@ hl.monitor({
 	mode = "2560x1440@165.00Hz",
 	position = "1920x0",
 	scale = 1,
-	vrr = 2,
+	vrr = 3,
 })
 
 hl.monitor({
@@ -16,6 +16,16 @@ hl.monitor({
 	mode = "1920x1080@60.000",
 	position = "0x0",
 	scale = 1,
+})
+
+----------------
+---- GENERAL ----
+----------------
+
+hl.config({
+	binds = {
+		window_direction_monitor_fallback = false,
+	},
 })
 
 ----------------
