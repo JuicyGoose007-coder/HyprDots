@@ -6,6 +6,89 @@ require("nord").set()
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+-- Matugen color overrides (syntax + statusline), reusable for live reload
+local function apply_matugen_colors()
+	package.loaded["modules.matugen-colors"] = nil
+	local ok, c = pcall(require, "modules.matugen-colors")
+	if not ok then
+		return
+	end
+
+	local keyword_groups = {
+		"Keyword",
+		"Conditional",
+		"Repeat",
+		"Exception",
+		"Label",
+		"@keyword",
+		"@keyword.return",
+		"@keyword.conditional",
+		"@keyword.repeat",
+		"@keyword.operator",
+		"@keyword.function",
+		"@keyword.import",
+		"@keyword.exception",
+	}
+	local string_groups = {
+		"String",
+		"Character",
+		"@string",
+		"@string.escape",
+		"@string.special",
+	}
+	local func_groups = {
+		"Function",
+		"@function",
+		"@function.call",
+		"@function.method",
+		"@function.method.call",
+		"@function.builtin",
+		"@constructor",
+	}
+	local comment_groups = {
+		"Comment",
+		"@comment",
+		"@comment.line",
+		"@comment.block",
+	}
+	for _, g in ipairs(keyword_groups) do
+		vim.api.nvim_set_hl(0, g, { fg = c.keyword })
+	end
+	for _, g in ipairs(string_groups) do
+		vim.api.nvim_set_hl(0, g, { fg = c.str })
+	end
+	for _, g in ipairs(func_groups) do
+		vim.api.nvim_set_hl(0, g, { fg = c.func })
+	end
+	for _, g in ipairs(comment_groups) do
+		vim.api.nvim_set_hl(0, g, { fg = c.comment, italic = true })
+	end
+
+	vim.api.nvim_set_hl(0, "MiniStatuslineModeNormal", { fg = c.on_normal, bg = c.normal, bold = true })
+	vim.api.nvim_set_hl(0, "MiniStatuslineModeInsert", { fg = c.on_insert, bg = c.insert, bold = true })
+	vim.api.nvim_set_hl(0, "MiniStatuslineModeVisual", { fg = c.on_visual, bg = c.visual, bold = true })
+	vim.api.nvim_set_hl(0, "MiniStatuslineModeReplace", { fg = c.on_replace, bg = c.replace, bold = true })
+	vim.api.nvim_set_hl(0, "MiniStatuslineModeCommand", { fg = c.on_command, bg = c.command, bold = true })
+	vim.api.nvim_set_hl(0, "MiniStatuslineFilename", { fg = c.fg, bg = c.bg_mid })
+	vim.api.nvim_set_hl(0, "MiniStatuslineFileinfo", { fg = c.fg_muted, bg = c.bg })
+	vim.api.nvim_set_hl(0, "MiniStatuslineInactive", { fg = c.fg_muted, bg = c.bg })
+end
+
+apply_matugen_colors()
+
+local watcher = vim.uv.new_fs_event()
+if watcher then
+	watcher:start(
+		vim.fn.stdpath("config") .. "/lua/modules",
+		{ recursive = false },
+		vim.schedule_wrap(function(err, fname, _events)
+			if not err and fname == "matugen-colors.lua" then
+				apply_matugen_colors()
+			end
+		end)
+	)
+end
+
 -- Experimental UI2: floating cmdline and messages
 vim.o.cmdheight = 1
 require("vim._core.ui2").enable({

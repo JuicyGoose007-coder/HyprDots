@@ -1,15 +1,23 @@
 -- Dashboard
+local ok, c = pcall(require, "modules.matugen-colors")
+if not ok then
+	c = {
+		normal = "#88C0D0", fg = "#D8DEE9", fg_muted = "#4C566A",
+		shortcut = "#BF616A", icon = "#A3BE8C",
+	}
+end
+
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "dashboard",
 	once = true,
 	callback = function()
 		vim.b.miniindentscope_disable = true
 		require("ibl").setup_buffer(0, { enabled = false })
-		vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#88C0D0", bold = true })
-		vim.api.nvim_set_hl(0, "DashboardFooter", { fg = "#4C566A", italic = true })
-		vim.api.nvim_set_hl(0, "DashboardShortCut", { fg = "#BF616A" })
-		vim.api.nvim_set_hl(0, "DashboardDesc", { fg = "#D8DEE9" })
-		vim.api.nvim_set_hl(0, "DashboardIcon", { fg = "#A3BE8C" })
+		vim.api.nvim_set_hl(0, "DashboardHeader",   { fg = c.normal,   bold = true })
+		vim.api.nvim_set_hl(0, "DashboardFooter",   { fg = c.fg_muted, italic = true })
+		vim.api.nvim_set_hl(0, "DashboardShortCut", { fg = c.shortcut })
+		vim.api.nvim_set_hl(0, "DashboardDesc",     { fg = c.fg })
+		vim.api.nvim_set_hl(0, "DashboardIcon",     { fg = c.icon })
 	end,
 })
 require("dashboard").setup({
