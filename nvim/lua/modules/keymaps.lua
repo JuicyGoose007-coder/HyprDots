@@ -1,9 +1,5 @@
 -- Keymaps
 
--- Leader keys (must be before keymaps)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- Local Harpoon
 local harpoon = require("harpoon")
 
@@ -16,7 +12,7 @@ vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>", { desc = "Restart nvim" })
 
 -- File explorer
 vim.keymap.set("n", "<leader>e", "<cmd>Yazi<cr>", { desc = "File explorer" })
--- vim.keymap.set("n", "<leader>e", "<cmd>Oil<cr>", { desc = "File explorer" })
+vim.keymap.set("n", "<leader>t", "<cmd>Neotree toggle<cr>", { desc = "File Tree" })
 
 -- Git
 vim.keymap.set("n", "<leader>gg", function()
@@ -146,4 +142,3 @@ vim.keymap.set("n", "<leader>rw", function()
 	local cmd = ":%s/\\<" .. word .. "\\>//gc<Left><Left><Left>"
 	vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(cmd, true, false, true), "n", false)
 end, { desc = "Replace word under cursor" })
-

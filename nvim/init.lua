@@ -1,3 +1,6 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- Bootstrap packages
 vim.pack.add({ { src = "https://github.com/nvim-lua/plenary.nvim" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/nvim-tree/nvim-web-devicons" } }, { load = true })
@@ -21,6 +24,8 @@ vim.pack.add({ { src = "https://github.com/folke/which-key.nvim" } }, { load = t
 vim.pack.add({ { src = "https://github.com/nvimdev/dashboard-nvim" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/mg979/vim-visual-multi" } }, { load = true })
 vim.pack.add({ { src = "https://github.com/mikavilpas/yazi.nvim" } }, { load = true })
+vim.pack.add({ { src = "https://github.com/MunifTanjim/nui.nvim" } }, { load = true })
+vim.pack.add({ { src = "https://github.com/nvim-neo-tree/neo-tree.nvim" } }, { load = true })
 
 -- Required Modules
 require("modules.options")
