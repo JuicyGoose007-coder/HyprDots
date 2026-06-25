@@ -3,14 +3,23 @@ hypr/hyprlock.conf
 
 # Theme-generated files (only change with theme switcher)
 ghostty/themes/noctalia
+ghostty/themes/Matugen
 hypr/modules/theme.lua
+hypr/colors.lua
+hypr/hyprlock/colors.conf
 lazygit/config.yml
+nvim/lua/modules/matugen-colors.lua
 rofi/cliphist.rasi
 rofi/colors.rasi
+rofi/launchers/type-7/style-5.rasi
 starship/starship.toml
+swaync/colors.css
 swaync/style.css
+tmux/matugen-colors.conf
 tmux/tmux.conf
+waybar/colors/matugen.css
 waybar/style-wsonly.css
 waybar/style.css
 wlogout/style.css
 yazi/flavors/noctalia.yazi/flavor.toml
+yazi/theme.toml
