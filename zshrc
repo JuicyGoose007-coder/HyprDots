@@ -150,6 +150,7 @@ else
     alias la='ls -a --color=auto'
 fi
 
+# System
 alias grep='grep --color=auto'
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -158,9 +159,10 @@ alias ~='cd ~'
 alias h='history'
 alias j='jobs'
 alias c='clear'
+
+# Programs
 alias y='yazi'
 alias nv='nvim'
-alias oc='opencode'
 alias rb='reboot'
 alias rt='riptide'
 alias wm='wiremix'
