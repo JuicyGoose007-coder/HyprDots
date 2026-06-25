@@ -12,7 +12,6 @@ vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>", { desc = "Restart nvim" })
 
 -- File explorer
 vim.keymap.set("n", "<leader>e", "<cmd>Yazi<cr>", { desc = "File explorer" })
-vim.keymap.set("n", "<leader>t", "<cmd>Neotree toggle<cr>", { desc = "File Tree" })
 
 -- Git
 vim.keymap.set("n", "<leader>gg", function()
