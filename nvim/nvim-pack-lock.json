@@ -57,6 +57,14 @@
       "rev": "1345d191bb3da9c7b0e977f4387c5761f9bff68d",
       "src": "https://github.com/echasnovski/mini.nvim"
     },
+    "neo-tree.nvim": {
+      "rev": "1b4c40051f2623d0a7dcf19d5b74b997b97b0a9a",
+      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
+    },
+    "neominimap.nvim": {
+      "rev": "0676085d898019f06044923934e38663f5efa290",
+      "src": "https://github.com/Isrothy/neominimap.nvim"
+    },
     "no-clown-fiesta.nvim": {
       "rev": "04b808e9769ded988089772ffcaf08d92d75d927",
       "src": "https://github.com/aktersnurra/no-clown-fiesta.nvim"
@@ -69,9 +77,17 @@
       "rev": "9fb62116b891184049c50ca6ffb0d3bc100a1a6e",
       "src": "https://github.com/AlexvZyl/nordic.nvim"
     },
+    "nui.nvim": {
+      "rev": "de740991c12411b663994b2860f1a4fd0937c130",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
     "nvim-lspconfig": {
       "rev": "bfcc0171a43f22afa61d927ffe9fcb6cb85dc99e",
       "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "nvim-tree.lua": {
+      "rev": "8e8be709c9a93e1ebefde7964884a8b564bfd3e0",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua"
     },
     "nvim-treesitter": {
       "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
