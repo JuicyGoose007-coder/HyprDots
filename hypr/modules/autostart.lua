@@ -17,14 +17,13 @@ hl.on("hyprland.start", function()
 
 	-- Discord --
 	hl.exec_cmd("uwsm app -s b -t service -- vesktop", { workspace = "name:Discord silent" })
-	-- hl.exec_cmd("sleep 2 && uwsm app -s b -t service -- ghostty --title=riptide -e zsh -ic riptide")
 
 	-- Main --
 	hl.exec_cmd("uwsm app -- ghostty", {
 		workspace = "name:Main",
 		float = true,
+		size = { 960, 600 },
 	})
-	-- hl.exec_cmd("uwsm app -- zen-browser", { workspace = "name:Main" })
 
 	-- Load hymission plugin
 	hl.exec_cmd(
