@@ -5,7 +5,8 @@
 	],
 
     "layer": "top",
-    "margin-top": 13,
+    "position": "bottom",
+    "margin-bottom": 13,
 
     "modules-left": [
         "custom/launcher",
