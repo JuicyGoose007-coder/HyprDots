@@ -12,7 +12,6 @@ nvim/lua/modules/matugen-colors.lua
 rofi/cliphist.rasi
 rofi/colors.rasi
 rofi/launchers/type-7/style-5.rasi
-starship/starship.toml
 swaync/colors.css
 swaync/style.css
 tmux/matugen-colors.conf
