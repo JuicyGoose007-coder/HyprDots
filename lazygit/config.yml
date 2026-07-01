@@ -1,0 +1,35 @@
+gui:
+  language: en
+  scrollHeight: 2
+  scrollPastBottom: false
+  sidePanelWidth: 0.2
+  expandFocusedSidePanel: true
+  showFileTree: true
+  nerdFontsVersion: "3"
+  showFileIcons: true
+  border: Rounded
+  animateDismissal: false
+  filterMode: fuzzy
+  statusPanelView: allBranchesLog
+  showBranchCommitHash: true
+  showDivergenceFromBaseBranch: arrowAndNumber
+  mainPanelSplitMode: flexible
+  timeFormat: "02 Jan 06"
+  shortTimeFormat: "3:04PM"
+  mouseEvents: true
+  theme:
+  activeBorderColor: ["#dc3906", "bold"]
+  inactiveBorderColor: ["#686C70"]
+  searchingActiveBorderColor: ["#500adc", "bold"]
+  optionsTextColor: ["#dc3906"]
+  selectedLineBgColor: ["#282424"]
+  cherryPickedCommitFgColor: ["#dc3906"]
+  cherryPickedCommitBgColor: ["#686C70"]
+  unstagedChangesColor: ["#37dc08"]
+  defaultFgColor: ["#dce1e6"]
+git:
+  pagers:
+    - colorArg: always
+      pager: delta --dark --paging=never --side-by-side --line-numbers --syntax-theme="TwoDark"
+os:
+  editPreset: "nvim"
