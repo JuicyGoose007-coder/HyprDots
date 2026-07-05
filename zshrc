@@ -134,6 +134,12 @@ alias update='paru -Syu'
 alias pac-upd='sudo pacman -Syu'
 alias upd='~/scripts/update.sh'
 
+# Install/Remove
+alias install='paru -S '
+alias pac-install='sudo pacman -S '
+alias remove='sudo pacman -Rs '
+alias remove-all='sudo pacman -Rns '
+
 # Hyprland
 alias hc='hyprctl clients'
 alias hr='hyprctl reload'
@@ -159,6 +165,7 @@ alias ~='cd ~'
 alias h='history'
 alias j='jobs'
 alias c='clear'
+alias cat='bat'
 
 # Programs
 alias y='yazi'
@@ -166,12 +173,6 @@ alias nv='nvim'
 alias rb='reboot'
 alias rt='riptide'
 alias wm='wiremix'
-
-# Install/Remove
-alias install='paru -S '
-alias pac-install='sudo pacman -S '
-alias remove='sudo pacman -Rs '
-alias remove-all='sudo pacman -Rns '
 
 # Orphan pkgs
 alias orphan-check='pacman -Qdtq'
