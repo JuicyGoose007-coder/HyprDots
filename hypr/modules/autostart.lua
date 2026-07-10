@@ -4,6 +4,13 @@
 
 -- UWSM Launched ---
 hl.on("hyprland.start", function()
+	-- Re-enable DP-1, which is force-disabled during the tuigreet console
+	-- (kernel video=DP-1:d) so tuigreet renders cleanly on DP-2 only.
+	-- The connector reports fully "disconnected" at the DRM level, not just
+	-- hidden from the console, so a compositor-side monitor call can't
+	-- revive it -- it has to be flipped back on via sysfs directly.
+	hl.exec_cmd("sudo /usr/local/bin/dp1-on")
+
 	hl.exec_cmd("uwsm app -s b -t service -- /usr/lib/hyprpolkitagent/hyprpolkitagent")
 	hl.exec_cmd("uwsm app -s b -t service -- awww-daemon")
 	hl.exec_cmd("uwsm app -s b -t service -- waybar")
